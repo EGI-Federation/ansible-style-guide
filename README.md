@@ -1,6 +1,12 @@
 # Style Guide for EGI Ansible 
 
 This repository contains style guide for EGI's use of Ansible. See [EGI's roles on Galaxy](https://galaxy.ansible.com/EGI-Foundation).
+You can find guides on
+
+  - Documenting roles
+  - Ansible syntax
+  - Testing scenarios and tools
+  - Release strategies
 
 ## About
 
