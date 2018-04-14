@@ -1,2 +1,5 @@
 stylez/
 .vscode/
+.molecule/
+__pycache__/
+*.pyc
