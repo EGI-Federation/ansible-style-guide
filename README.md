@@ -4,12 +4,12 @@
 
 This repository contains style guide for EGI's use of Ansible.
 See [EGI's roles on Galaxy](https://galaxy.ansible.com/EGI-Foundation).
-You can find guides on
+You can find guides on:
 
-- [Documenting roles](Documentation.md)
-- [Ansible syntax in roles](AnsibleSyntax.md)
-- [Testing role scenarios, testing tools](Testing.md)
-- [Role release and publication](Release.md)
+- [Documenting roles](docs/Documentation.md)
+- [Ansible syntax in roles](docs/AnsibleSyntax.md)
+- [Testing role scenarios, testing tools](docs/Testing.md)
+- [Role release and publication](docs/Release.md)
 
 ## Motivation
 
