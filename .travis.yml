@@ -5,23 +5,23 @@ sudo: required
 services:
 - docker
 env:
-  md_ignore: "R1"
-
+  md_ignore: R1
 before_install: 
 install:
 - pip install -r requirements.txt
 before_script:
-  - for file in `find . -maxdepth 2 -name "*.md"` ;  do markdownlint --ignore $md_ignore $file ; done
+- for file in `find . -maxdepth 2 -name "*.md"` ;  do markdownlint --ignore $md_ignore
+  $file ; done
 script:
 - cd test-role
 - molecule test
 - cd $TRAVIS_BUILD_DIR
-after_success:
-after_failure:
+after_success: 
+after_failure: 
 before_deploy: 
-deploy:
-after_deploy:
-after_script:
+deploy: 
+after_deploy: 
+after_script: 
 notifications:
   slack:
-    secure: sJ1+w/PN7XR8rkXBWxqlL6tT6XlUOF3J6OdbCzkSZppORxa55BwXilMawrKEsN7A2qEJuFHmKkHSd355jRhwZJSAquODKkuCMsP6iioR4fPIBAZW42ypYvKIxPK8MMvRaNgEAT+J6a5R93V0b5JdMuZiOcSY2tZrewcWPlDvR5cbVZO3USx6FQIG1XmDaSrmNVZDE4JOp92bUvlxXNMf40tK+Xqk0opufTPTFr6NlXDvfIGZ6wf9pAI4PgF6bj7PbG7zjT80KmzVB3lBvLjHt0iqVjiKzRkDSpkyWRS6JNZPmc1JB94ELgTw9OWFA++HgoxY1dwkqvfRJc5Ucuc2VGVE+ytxKxCNapsY7/mcCbNLA+3YxULxZGNXhG/TgXhLySzEPY4W8/1C/s/DYVHX0hAKOalc8bsELR9bZVjnhjvvafVdj3nbb4Zf5PFcPbLGg3InnlyOLCoQfdLqlRT0M/zKDDnO0X7+SMbY3w+wfFZ3tKvYhaEW5G2/yAIeVfkp2FBLq3TLNLux5nVB+sBcqBRFoIMhSWfpEMnZcB3drqsiAHu4g6HxSvbKmnkXJmaVXV2D9x6QRKhyujjWORf+1m6Akkzkdn61/qwp+K70sY7f2d/2LjK5uww7m9sKMDRk8fot+QBHGdx9bpqyWR8ZlFtZKnMM4lI7UNE/tw9B8ZQ=
+    secure: MkL89EruSOW/4WhmcoVZaBBHB1/cS4iaojHDnCAiUU1Er2W5MyvOgrpzq6Iuwh3nJcYRCcX8Jib3zbmNLfCOyqgxx7AHDPXQ+t+YS7HOjODYprNlE7eVK7l3QDqeSZVK2yWva+sGKXVIqDCTe+6uIpA5IoTJkAfebEe6B2ww5aMF/sKMH1CXHRoWFVy/l+h2/fZS394jR2R6jPGZA9WG3Yl2N5DEiCb3HoasPtFJwdr28VNHujYi4WHOJFqMT/jCJ1Tg7LNf1/Q+unnXSTQMGGnU1qZ9A/IZU5sqVZFAwSoT/MA7tJv21FoFu2LblO2YY5s5XgxWNyPWCB6iRTv3wcQTuHkhJp6kiXIltcVwvNH+XNJpIcYi/6ROgQaczJZ6PhVWfej7TsoC1BAj64ThU5/36bN25ApvTrypjwaai6ZrRBjMchmFw8OECekEwuwBLdx/zsXRRd5P7fyH+UXhhgeRTwwbWbpYynrhhmgl/oqu+zAQ6Wqhrpgdqs7cxgnsjrnroT02YnqzW6upzh4o8kCLFrn8hW5TLvfrMYGdeYJimQkEIOoeqH1Lw0J5bvMdysG/EIphUj+cIgWz/dqTsJaQFiuKxwbjy2DtRdF8pB0pWXrq1pcmwGZxhcN3GQ7Z3jgSQhxVa5fYe1xRN5eX9yzDdEFZiOLq8Mbb5J/hZZ0=

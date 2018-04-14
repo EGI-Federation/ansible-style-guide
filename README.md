@@ -1,21 +1,25 @@
+[![Build Status](https://travis-ci.org/EGI-Foundation/ansible-style-guide.svg?branch=master)](https://travis-ci.org/EGI-Foundation/ansible-style-guide)
+
 # Style Guide for EGI Ansible
 
 This repository contains style guide for EGI's use of Ansible.
 See [EGI's roles on Galaxy](https://galaxy.ansible.com/EGI-Foundation).
 You can find guides on
 
-- Documenting roles
-- Ansible syntax
-- Testing scenarios and tools
-- Release strategies
+- [Documenting roles](Documentation.md)
+- [Ansible syntax in roles](AnsibleSyntax.md)
+- [Testing role scenarios, testing tools](Testing.md)
+- [Role release and publication](Release.md)
 
-## About
+## Motivation
 
+EGI is responsible for several [internal services](https://www.egi.eu/internal-services) either directly, or through collaboration with partners.
+Ansible roles are a simple, powerful way to express the desired state and composition of these services.
+As with many languages and tools, a certain amount of leeway is possible when it comes to the style of implementation.
 When working on roles, it's a good idea to have common nomenclature,
 follow common styles and adopt common practice regarding documentation,
 community engagement, maintenance, support, _etc_.
-
-## Motivation
+With this repository, we  
 
 This repository expresses the consensus view of the [EGI Operations team](https://www.egi.eu/internal-services/operations-coordination-and-support/)
 about how Ansible roles should be developed. It's raisons d'etre are:
@@ -27,6 +31,9 @@ about how Ansible roles should be developed. It's raisons d'etre are:
   Further it will **encourage contributors**, providing better transparency in
   the process, and allowing discussion around the style guide itself.
 
+- **Improve reliability,  test coverage**:
+
+- **Promote re-use**:
 <!-- TODO : Using -->
 
 ## Contributing
