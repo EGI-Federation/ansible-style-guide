@@ -4,11 +4,14 @@ python:
 sudo: required
 services:
 - docker
+env:
+  md_ignore: "R1"
+
 before_install: 
 install:
 - pip install -r requirements.txt
 before_script:
-  - for file in `find . -maxdepth 2 -name "*.md"` ;  do markdownlint $file ; done
+  - for file in `find . -maxdepth 2 -name "*.md"` ;  do markdownlint --ignore $md_ignore $file ; done
 script:
 - cd test-role
 - molecule test

@@ -42,6 +42,6 @@ If you have feedback or would like to engage on issues related to this, start a 
 
 ## Code of Conduct
 
-EGI believes in a healthy community and welcomes diverse points of view. 
+EGI believes in a healthy community and welcomes diverse points of view.
 Contributors to and users of this repository are asked to refer to the [Code of Conduct](CODE_OF_CONDUCT.md) regarding any conflicts or events of abuse which may arise.
 The maintainers undertake to abide by the Code of Conduct in their dealings with each other and the community.

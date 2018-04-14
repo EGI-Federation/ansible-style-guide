@@ -3,3 +3,4 @@ stylez/
 .molecule/
 __pycache__/
 *.pyc
+.pytest_cache/
