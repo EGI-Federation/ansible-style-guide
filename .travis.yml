@@ -1,27 +1,30 @@
+---
 language: python
 python:
-- '2.7'
+  - '2.7'
 sudo: required
 services:
-- docker
+  - docker
 env:
   md_ignore: R1
-before_install: 
+before_install:
 install:
-- pip install -r requirements.txt
+  - pip install -r requirements.txt
 before_script:
-- for file in `find . -maxdepth 2 -name "*.md"` ;  do markdownlint --ignore $md_ignore
-  $file ; done
+  - >
+      for file in `find . -maxdepth 2 -name "*.md"` ;  do
+      markdownlint --ignore $md_ignore $file ;
+      done
 script:
-- cd test-role
-- molecule test
-- cd $TRAVIS_BUILD_DIR
-after_success: 
-after_failure: 
-before_deploy: 
-deploy: 
-after_deploy: 
-after_script: 
+  - cd test-role
+  - molecule test
+  - cd $TRAVIS_BUILD_DIR
+after_success:
+after_failure:
+before_deploy:
+deploy:
+after_deploy:
+after_script:
 notifications:
   slack:
-    secure: MkL89EruSOW/4WhmcoVZaBBHB1/cS4iaojHDnCAiUU1Er2W5MyvOgrpzq6Iuwh3nJcYRCcX8Jib3zbmNLfCOyqgxx7AHDPXQ+t+YS7HOjODYprNlE7eVK7l3QDqeSZVK2yWva+sGKXVIqDCTe+6uIpA5IoTJkAfebEe6B2ww5aMF/sKMH1CXHRoWFVy/l+h2/fZS394jR2R6jPGZA9WG3Yl2N5DEiCb3HoasPtFJwdr28VNHujYi4WHOJFqMT/jCJ1Tg7LNf1/Q+unnXSTQMGGnU1qZ9A/IZU5sqVZFAwSoT/MA7tJv21FoFu2LblO2YY5s5XgxWNyPWCB6iRTv3wcQTuHkhJp6kiXIltcVwvNH+XNJpIcYi/6ROgQaczJZ6PhVWfej7TsoC1BAj64ThU5/36bN25ApvTrypjwaai6ZrRBjMchmFw8OECekEwuwBLdx/zsXRRd5P7fyH+UXhhgeRTwwbWbpYynrhhmgl/oqu+zAQ6Wqhrpgdqs7cxgnsjrnroT02YnqzW6upzh4o8kCLFrn8hW5TLvfrMYGdeYJimQkEIOoeqH1Lw0J5bvMdysG/EIphUj+cIgWz/dqTsJaQFiuKxwbjy2DtRdF8pB0pWXrq1pcmwGZxhcN3GQ7Z3jgSQhxVa5fYe1xRN5eX9yzDdEFZiOLq8Mbb5J/hZZ0=
+    secure: S5s1uMaEu6FZjovKwBU43GKoZsdAFvUhvbnfGKfymSZxVNGNmPpWkpPiTeH5keo3lMEorU5KQgPKPwoXTIZnHv687kpW+KUIqfZw2Z2NVkrfJ8gZxj2oOqbCCXl+JHeJSziQ/siUDJriadfqt7tmXWLvlw19G+Na5mBevqFxtFpQ6HrCapEpOkarcmJbOONxlk8zVKcjCh06sZYtxdiRK67VAsoQWINnAmp1sFNjwoaSCF1ATayk76XGsObUmS3/ku51a5gyPzWmZzc0biXk+XGjeB2BRwur/uzQa2UQmlUBrhYLMzTDvUse2oR/i6ae2/vT90wBxMk/dY+OF5rO0v0i9sZMdl102F/CgAGlPPQ/aTXVI6pVnL+5D/X0OqaJ+CR4EhUVjXNbvdkg1wm7EZQbWpKP1P3Hf3YnzPTwllZCX/NNz/5vtJjjedm161EtKi0WgbcKt9UTmINCfGDAg/2vmVm3bBUqdrdGlX5VUszhlGxGobTAeTHyoLgY0+qjm6Gj8f/VTsoq+jIRhZ0Mh1c/eTH179RGCNhwhL3H7QEMarbFx+D1Lhh5MN5bNyJ8Q6Mt7GaRB57OHRpLSZSAgbR/HGkaKF8gyA6zxUh2yxsIRJw0KvX4PPSYJbcyR8fa96I1xcRFNwC1XmP4WzFu2ocGBERK+bHZSqkT2T7DSCw=
