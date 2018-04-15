@@ -116,6 +116,11 @@ This pattern says that software versions should take an `X.Y.Z` pattern where:
 Releases are generally performed after any bugfix / feature enhancement pull request merge. You can watch the Github repository for updates.
 The latest release will always point to the master branch, whilst release candidates will be done in version-specific branches, such as `v0.2.0-rc`.
 
+### Publishing Releases
+
+Major releases are published in Zenodo, using the GitHub integration.
+A `codemeta.json` must accompany each release accurately describing the research object, and properly recognising author and contributor metadata.
+
 ## Contribution Do's and Don't's
 
   1. Please do include tests for your contribution.
