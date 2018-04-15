@@ -3,17 +3,29 @@
 
 title 'Ansible skeleton'
 test_role_path = "#{ENV['PWD']}/test-role/"
-# you add controls here
+ansible_dirs = ["defaults","files","handlers","meta","tasks","vars"]
+
 control 'Ansible Skeleton Directories' do  # A unique ID for this control
-  dirs = ["defaults","files","handlers","meta","tasks","vars"]
   impact 0.8 # The criticality, if this control fails.
   title 'Ensure all Ansible role directories are present' # A human-readable title
   desc 'Ansible Galaxy needs the defaults, files, handlers, meta, tasks and vars 
   directories to be present'
-  dirs.each do |dir|
-    dir = test_role_path + dir
-    describe file(dir) do  # The actual test
+  ansible_dirs.each do |ansible_dir|
+    ansible_dir = test_role_path + ansible_dir
+    describe file(ansible_dir) do  # The actual test
       it { should be_directory }
+    end
+  end
+end
+
+control 'Ansible main YAML files' do
+  impact 1.0
+  title 'Each directory must have at least a main.yml'
+  desc 'Ansible needs a main.yml file in each directory. Use include_files if you need'
+  ansible_dirs.each do |ansible_dir|
+    mainfile = test_role_path + ansible_dir + '/main.yml'
+    describe file(mainfile) do
+      it { should be_file }
     end
   end
 end
