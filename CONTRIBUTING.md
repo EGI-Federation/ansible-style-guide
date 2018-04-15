@@ -3,12 +3,12 @@
 Thank you for taking the time to contribute to this project.
 The maintainers greatly appreciate the interest of contributors and rely on continued engagement with the community to ensure that this project remains useful.
 We would like to take steps to put contributors in the best possible position to have their contributions accepted.
-Please take a few moments to read this short guide on how to contrbute; bear in mind that contrbutions regarding how to best contribute are also welcome.
+Please take a few moments to read this short guide on how to contribute; bear in mind that contributions regarding how to best contribute are also welcome.
 
 ## Feedback and Questions
 
 If you wish to discuss anything related to the project, please open an issue or start a topic on the [EGI Community Forum](https://community.egi.eu).
-The maintainers will sometimes move issues off of GitHub to the community forum if it is thought that longer, more open-ended discussion would be beneficial, including a wider communnity scope.
+The maintainers will sometimes move issues off of GitHub to the community forum if it is thought that longer, more open-ended discussion would be beneficial, including a wider community scope.
 
 ## Kinds of contributions
 
@@ -26,6 +26,9 @@ Contributions may come in the form of:
 
 Before proposing a contribution via pull request, please ensure that an issue is open describing the need for your contribution.
 You will need to refer to this issue number when you submit the pull request.
+  - **It is recommended to make pull requests against release candidate branches, whenever features are involved**, instead of against the master branch. See [Release Cycle](#release-cycle) below.
+  - Pull requests to the master branch can be made in the case obvious fixes. See [Obvious Fix Policy](#obvious-fix-policy)
+
 
 We have a 3 step process for contributions. 
 
@@ -46,14 +49,14 @@ Code review takes place in GitHub pull requests. See [this article](https://help
 
 Once you open a pull request, maintainers will review your code using the built-in code review process in Github PRs. The process at this point is as follows:
 
-1. A maintainer will review your code and merge it if no changes are necessary. Your change will be merged into the cookbooks's `master` branch and will be noted in the project's `CHANGELOG.md` at the time of release.
+1. A maintainer will review your code and merge it if no changes are necessary. Your change will be merged into the repository's `master` branch and will be noted in the project's `CHANGELOG.md` at the time of release.
 1. If want your contribution to motivate your inclusion in the authorship, please add a line to that effect in the pull request
 2. If a maintainer has feedback or questions on your changes they they will set `request changes` in the review and provide an explanation.
 
 
 ### Obvious Fix Policy
 
-Small contributions, such as fixing spelling errors, where the content is small enough to not be considered intellectual property, can be submitted without signing the contribution for the DCO.
+Small contributions, such as fixing spelling errors, where the content is small enough to not be considered intellectual property can be made against the master branch
 
 As a rule of thumb, changes are obvious fixes if they do not introduce any new functionality or creative thinking. Assuming the change does not affect functionality, some common obvious fix examples include the following:
 
@@ -70,7 +73,7 @@ As a rule of thumb, changes are obvious fixes if they do not introduce any new f
 ```
 ------------------------------------------------------------------------
 commit 370adb3f82d55d912b0cf9c1d1e99b132a8ed3b5
-Author: Julia Child <juliachild@chef.io>
+Author: Julia Child <devguru@egi.eu>
 Date:   Wed Sep 18 11:44:40 2015 -0700
 
   Fix typo in the README.
@@ -82,20 +85,16 @@ Date:   Wed Sep 18 11:44:40 2015 -0700
 
 ## Using git
 
-You can copy a chef cookbook repository to your local workstation by running `git clone git://github.com/chef-cookbooks/COOKBOOKNAME.git`.
-
-For collaboration purposes, it is best if you create a GitHub account and fork the repository to your own account. Once you do this you will be able to push your changes to your GitHub repository for others to see and use.
-
-If you have another repository in your GitHub account named the same as the cookbook, we suggest you suffix the repository with `-cookbook`.
+For collaboration purposes, it is best if you create a GitHub account and fork the repository to your own account. Once you do this you will be able to push your changes to your GitHub repository for others to see and use, and it will be easier to send pull requests.
 
 ### Branches and Commits
 
-You should submit your patch as a git branch named after the Github issue, such as GH-22\. This is called a _topic branch_ and allows users to associate a branch of code with the ticket.
+You should submit your patch as a git branch named after the Github issue, such as `#3`\. This is called a _topic branch_ and allows users to associate a branch of code with the ticket.
 
 It is a best practice to have your commit message have a _summary line_ that includes the ticket number, followed by an empty line and then a brief description of the commit. This also helps other contributors understand the purpose of changes to the code.
 
 ```text
-    [GH-22] - platform_family and style
+    #3 - platform_family and style
 
     * use platform_family for platform checking
     * update notifies syntax to "resource_type[resource_name]" instead of
@@ -105,23 +104,17 @@ It is a best practice to have your commit message have a _summary line_ that inc
       values, and it is older than "old stable" debian release
 ```
 
-Remember that not all users use Chef in the same way or on the same operating systems as you, so it is helpful to be clear about your use case and change so they can understand it even when it doesn't apply to them.
-
-### More information
-
-Additional help with git is available on the [Community Contributions](https://docs.chef.io/community_contributions.html#use-git) page on the Chef Docs site.
-
 ## Release Cycle
 
-The versioning for Chef Software Cookbook projects is X.Y.Z.
+We follow the [Semantic Versioning](https://semver.org/) as far as applicable.
+This pattern says that software versions should take an `X.Y.Z` pattern where:
 
 - X is a major release, which may not be fully compatible with prior major releases
 - Y is a minor release, which adds both new features and bug fixes
 - Z is a patch release, which adds just bug fixes
 
-See the [Cookbook Versioning Policy](https://chef-community.github.io/cvp/) for more guidance on semantic versioning of cookbooks.
-
-Releases of Chef's cookbooks are generally performed after any bugfix / feature enhancement pull request merge. You can watch the Github repository for updates or watch the cookbook on the Supermarket to receive release notification e-mails.
+Releases are generally performed after any bugfix / feature enhancement pull request merge. You can watch the Github repository for updates.
+The latest release will always point to the master branch, whilst release candidates will be done in version-specific branches, such as `v0.2.0-rc`.
 
 ## Contribution Do's and Don't's
 
