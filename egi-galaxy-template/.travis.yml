@@ -28,6 +28,7 @@ after_deploy:
 after_script:
 # Add your notifications here.
 # Use travis encrypt to add api tokens.
-# notifications:
+notifications:
 #   slack:
 #     secure:
+  webhooks: "https://galaxy.ansible.com/api/v1/notifications/"
