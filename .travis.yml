@@ -21,10 +21,11 @@ before_script:
       markdownlint --ignore $md_ignore $file ;
       done
 script:
+  -  ansible-galaxy init -f --role-skeleton=egi-galaxy-template test-role
   - inspec exec -b local ansible-fashion-police
   - cd test-role
+  - molecule init scenario -r test-role
   - molecule test
-  - cd $TRAVIS_BUILD_DIR
 after_success:
 after_failure:
 before_deploy:
