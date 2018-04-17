@@ -6,8 +6,9 @@ sudo: required
 services:
   - docker
 env:
-  - md_ignore: R1
-  - TEST_ROLE="test-role"
+  global:
+    - MD_IGNORE="R1"
+    - TEST_ROLE="test-role"
 addons:
   apt:
     packages:
@@ -19,7 +20,7 @@ install:
 before_script:
   - >
       for file in `find . -maxdepth 2 -name "*.md"` ;  do
-      markdownlint --ignore $md_ignore $file ;
+      markdownlint --ignore $MD_IGNORE $file ;
       done
 script:
   - ansible-galaxy init -f --role-skeleton=egi-galaxy-template $TEST_ROLE
