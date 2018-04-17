@@ -2,14 +2,14 @@
 # copyright: 2018, The Authors
 
 title 'Must have CI'
-test_role_path = "#{ENV['PWD']}/test-role/"
+test_role_path = "#{ENV['PWD']}"
 
 control 'Travis' do
     impact 0.5
     title 'Roles should have continuous integration with Travis'
     desc 'Roles should have a properly configured .travis.yml file to ensure that they are tested'
 
-    travis_file = test_role_path+'.travis.yml'
+    travis_file = test_role_path+'/.travis.yml'
     describe file(travis_file) do 
         it { should be } # must have a travis
     end

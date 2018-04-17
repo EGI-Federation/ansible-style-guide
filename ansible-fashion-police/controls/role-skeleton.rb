@@ -2,7 +2,7 @@
 # copyright: 2018, The Authors
 
 title 'Ansible skeleton'
-test_role_path = "#{ENV['PWD']}/test-role/"
+test_role_path = "#{ENV['PWD']}/"
 ansible_dirs = ["defaults","files","handlers","meta","tasks","vars"]
 
 control 'Ansible Skeleton Directories' do  # A unique ID for this control

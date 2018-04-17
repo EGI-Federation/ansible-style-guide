@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/EGI-Foundation/ansible-style-guide.svg?branch=master)](https://travis-ci.org/EGI-Foundation/ansible-style-guide)
+[![Build Status](https://travis-ci.org/EGI-Foundation/ansible-style-guide.svg?branch=master)](https://travis-ci.org/EGI-Foundation/ansible-style-guide) [![Maintainability](https://api.codeclimate.com/v1/badges/f92ace02a15c3ecd758e/maintainability)](https://codeclimate.com/github/EGI-Foundation/ansible-style-guide/maintainability)
 
 # Style Guide for EGI Ansible
 
