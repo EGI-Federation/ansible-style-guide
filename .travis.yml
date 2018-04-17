@@ -8,7 +8,7 @@ services:
 env:
   global:
     - MD_IGNORE="R1"
-    - TEST_ROLE="test-role"
+    - TEST_ROLE_PATH="test-role"
 addons:
   apt:
     packages:
@@ -23,9 +23,9 @@ before_script:
       markdownlint --ignore $MD_IGNORE $file ;
       done
 script:
-  - ansible-galaxy init -f --role-skeleton=egi-galaxy-template $TEST_ROLE
+  - ansible-galaxy init -f --role-skeleton=egi-galaxy-template $TEST_ROLE_PATH
   - inspec exec -b local ansible-fashion-police
-  - cd $TEST_ROLE
+  - cd $TEST_ROLE_PATH
   - molecule init scenario -r test-role
   - molecule test
 after_success:
