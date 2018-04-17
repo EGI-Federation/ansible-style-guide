@@ -6,7 +6,8 @@ sudo: required
 services:
   - docker
 env:
-  md_ignore: R1
+  - md_ignore: R1
+  - TEST_ROLE="test-role"
 addons:
   apt:
     packages:
@@ -21,9 +22,9 @@ before_script:
       markdownlint --ignore $md_ignore $file ;
       done
 script:
-  -  ansible-galaxy init -f --role-skeleton=egi-galaxy-template test-role
+  - ansible-galaxy init -f --role-skeleton=egi-galaxy-template $TEST_ROLE
   - inspec exec -b local ansible-fashion-police
-  - cd test-role
+  - cd $TEST_ROLE
   - molecule init scenario -r test-role
   - molecule test
 after_success:

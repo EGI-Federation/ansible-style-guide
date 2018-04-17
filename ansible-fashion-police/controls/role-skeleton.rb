@@ -2,7 +2,10 @@
 # copyright: 2018, The Authors
 
 title 'Ansible skeleton'
-test_role_path = "#{ENV['PWD']}/"
+if ENV['TEST_ROLE_PATH'].nil?
+  fail "Please set the path to the role you want to test with TEST_ROLE_PATH"
+end
+test_role_path = "#{ENV['TEST_ROLE_PATH']}"
 ansible_dirs = ["defaults","files","handlers","meta","tasks","vars"]
 
 control 'Ansible Skeleton Directories' do  # A unique ID for this control

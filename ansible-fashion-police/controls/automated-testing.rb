@@ -2,7 +2,10 @@
 # copyright: 2018, The Authors
 
 title 'Must have CI'
-test_role_path = "#{ENV['PWD']}"
+if ENV['TEST_ROLE_PATH'].nil?
+    fail "Please set the path to the role you want to test with TEST_ROLE_PATH"
+  end
+test_role_path = "#{ENV['TEST_ROLE_PATH']}"
 
 control 'Travis' do
     impact 0.5
