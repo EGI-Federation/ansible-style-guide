@@ -17,7 +17,6 @@ control 'Meta' do
   end
   
   metafile['galaxy_info','platforms'].each do |platform|
-    puts platform
     describe(platform) do
       its (['name']) { should be_in ['EL','Debian'] }
     end
