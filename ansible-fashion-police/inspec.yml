@@ -1,3 +1,4 @@
+---
 name: ansible-fashion-police
 title: Ansible Fashion Police - the EGI Ansible Style Guide
 maintainer: EGI Operations Team
@@ -5,17 +6,21 @@ copyright: EGI Foundation
 copyright_email: operations@egi.eu
 license: Apache-2.0
 summary: An InSpec Compliance Profile for Ansible roles
-version: 0.1.0
+version: 0.1.1
 inspec_version: 2.1
 supports:
   - os-family: linux
   - os-name: debian
-    release: 
-      - 8 
+    release:
+      - 8
       - 9
       - 10
   - os-name: redhat
     release:
       - 6
       - 7
-depends: []
+depends:
+  - name: black panther
+    git: https://github.com/brucellino/black-panther
+    branch: master
+    version: 0.1.0
