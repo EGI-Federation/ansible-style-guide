@@ -18,4 +18,6 @@ supports:
     release:
       - 6
       - 7
-depends: []
+depends:
+  name: supermarket-profile
+  supermarket: brucellino/black-panther
