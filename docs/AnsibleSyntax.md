@@ -10,7 +10,7 @@ This document serves to guide the development of Ansible roles, by providing rel
 ## Coverage
 
   1. The role must be accurately described in `meta/main.yml`
-  1. Your role should support **at least** the operating systems deployed on EGI sites.
+  1. Your role should support **at least** the operating systems currently supported for EGI sites, unless it's specific to a particular supported OS.
 
 ## Variables
 
