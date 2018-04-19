@@ -86,7 +86,6 @@ dockerpty==0.4.1
 # MarkupSafe==1.0
 # marshmallow==2.13.5
 # matplotlib==2.2.2
-markdownlint
 # mccabe==0.6.1
 # mock==2.0.0
 molecule==2.12.1
