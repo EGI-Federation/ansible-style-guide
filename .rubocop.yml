@@ -1,6 +1,6 @@
 ---
 Style/WordArray:
-    Enabled: false
+  Enabled: false
 Style/Encoding:
   Enabled: false
 Metrics/LineLength:
