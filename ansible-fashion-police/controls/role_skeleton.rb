@@ -3,19 +3,18 @@
 
 title 'Ansible skeleton'
 if ENV['TEST_ROLE_PATH'].nil?
-  fail "Please set the path to the role you want to test with TEST_ROLE_PATH"
+  raise 'Please set the path to the role you want to test with TEST_ROLE_PATH'
 end
-test_role_path = "#{ENV['TEST_ROLE_PATH']}"
-ansible_dirs = ["defaults","files","handlers","meta","tasks","vars"]
+test_role_path = ENV['TEST_ROLE_PATH'].to_s
+ansible_dirs = ['defaults', 'files', 'handlers', 'meta', 'tasks', 'vars']
 
-control 'Ansible Skeleton Directories' do  # A unique ID for this control
+control 'Ansible Skeleton Directories' do # A unique ID for this control
   impact 0.8 # The criticality, if this control fails.
   title 'Ensure all Ansible role directories are present' # A human-readable title
-  desc 'Ansible Galaxy needs the defaults, files, handlers, meta, tasks and vars 
-  directories to be present'
+  desc 'Ansible Galaxy needs the defaults, files, handlers, meta, tasks and vars directories to be present'
   ansible_dirs.each do |ansible_dir|
     ansible_dir = test_role_path + ansible_dir
-    describe file(ansible_dir) do  # The actual test
+    describe file(ansible_dir) do # The actual test
       it { should be_directory }
     end
   end
