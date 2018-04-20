@@ -1,9 +1,0 @@
----
-lockfile_version: 1
-depends:
-- name: black panther
-  resolved_source:
-    git: https://github.com/brucellino/black-panther
-    ref: 612c985ca28f9028a14d8b7bba5c9f99f26b4065
-  version_constraints:
-  - 0.1.0

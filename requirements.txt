@@ -1,3 +1,11 @@
-molecule
-pymarkdownlint
-docker-py
+# absl-py==0.1.13
+ansible==2.5.0
+docker==2.7.0
+docker-compose==1.9.0
+docker-py==1.10.6
+docker-pycreds==0.2.2
+dockerpty==0.4.1
+molecule==2.12.1
+pymarkdownlint==0.3.1
+requests==2.18.4
+requestsexceptions==1.4.0

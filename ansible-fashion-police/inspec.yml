@@ -19,8 +19,4 @@ supports:
     release:
       - 6
       - 7
-depends:
-  - name: black panther
-    git: https://github.com/brucellino/black-panther
-    branch: master
-    version: 0.1.0
+depends: []

@@ -9,6 +9,7 @@ env:
   - MD_IGNORE="R1"
   - TEST_ROLE_PATH="test-role/"
   - GITHUB_REPO=$TRAVIS_REPO_SLUG
+  - RUBOCOP_OPTS="--fail-level=error"
   - secure: wefL0lPkBX8KEgAaWMhZWifuJoFaJSopMKjuu9jVZJ0W9PgOTUSjsOqHLcgwaWNtnlw/FL/mdAtCjxr8wtl6G0PrXe57Gnao9CBAq7GngUjSXokTSlv83Ka4jsBGFYOE5SM/3/uIL25cr60WsXJhKc2nqUBReM+U05qLlTpJIkoJ4g0BPDvHaypGA/4WB1WZLNEUc3MxMz76O2vsTX+1sjqlLA6PMSe4GfRCHotNKRuVthlF1HVSpE7PsVRirAsa5oVtKMh336mkjr+frk4eCsPYZIrxCwKo/0Qw/5KsBRWPwSdJFblrShAYIEOSEglfzxNvXEtc8HPGO6LNn9b+x/EHX5ngqyJbbw/8WotKW5afNjmxgYZGXMgXFAZF1DhbFf+rAWHOouk0eO13l/k4tdZNI1ea7MsNfrFSTRY4U3BZKMDGk/moAYtk+9Lx0txd2/G1G6VCrfoQ2ByEm7LL0ImuPEHINIRu/7aXvd4XheJIsclVhsVagytHgnw9zHn0t4ak9X4/gE+Qn78DLN2ORZytZl7dIjJSI4BVJvxb8m7sjyopFARUo2iKmOqo1+jHlwdrl4vvk6GzdH6OHfd0CAAmvCPs8Pi0f6jaR37XqipOrEY9OupoHCrpzfg5s4njs2U0ttVXgLRSc9feJ24QSsBKwUrpUf+EPTt9jt0mMEM=
 addons:
   apt:
@@ -20,9 +21,8 @@ install:
 - bundle install
 before_script:
 - 'for file in `find . -maxdepth 2 -name "*.md"` ;  do markdownlint --ignore $MD_IGNORE
-  $file ; done
-
-'
+  $file ; done'
+- rubocop ansible-fashion-police/controls
 script:
 - ansible-galaxy init -f --role-skeleton=egi-galaxy-template $TEST_ROLE_PATH
 - inspec exec -b local ansible-fashion-police
@@ -32,9 +32,9 @@ script:
 after_success: 
 after_failure: 
 before_deploy: 
-deploy: 
-after_deploy: 
-after_script: 
+deploy:
+after_deploy:
+after_script:
 notifications:
   slack:
     secure: S5s1uMaEu6FZjovKwBU43GKoZsdAFvUhvbnfGKfymSZxVNGNmPpWkpPiTeH5keo3lMEorU5KQgPKPwoXTIZnHv687kpW+KUIqfZw2Z2NVkrfJ8gZxj2oOqbCCXl+JHeJSziQ/siUDJriadfqt7tmXWLvlw19G+Na5mBevqFxtFpQ6HrCapEpOkarcmJbOONxlk8zVKcjCh06sZYtxdiRK67VAsoQWINnAmp1sFNjwoaSCF1ATayk76XGsObUmS3/ku51a5gyPzWmZzc0biXk+XGjeB2BRwur/uzQa2UQmlUBrhYLMzTDvUse2oR/i6ae2/vT90wBxMk/dY+OF5rO0v0i9sZMdl102F/CgAGlPPQ/aTXVI6pVnL+5D/X0OqaJ+CR4EhUVjXNbvdkg1wm7EZQbWpKP1P3Hf3YnzPTwllZCX/NNz/5vtJjjedm161EtKi0WgbcKt9UTmINCfGDAg/2vmVm3bBUqdrdGlX5VUszhlGxGobTAeTHyoLgY0+qjm6Gj8f/VTsoq+jIRhZ0Mh1c/eTH179RGCNhwhL3H7QEMarbFx+D1Lhh5MN5bNyJ8Q6Mt7GaRB57OHRpLSZSAgbR/HGkaKF8gyA6zxUh2yxsIRJw0KvX4PPSYJbcyR8fa96I1xcRFNwC1XmP4WzFu2ocGBERK+bHZSqkT2T7DSCw=
