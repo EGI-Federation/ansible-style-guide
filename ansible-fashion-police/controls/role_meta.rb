@@ -14,12 +14,12 @@ control 'Meta' do
   desc 'The meta/main.yml file must support all platforms of EGI sites'
   metafile = yaml(test_role_path + '/meta/main.yml')
   describe(metafile) do
-    its (['galaxy_info']) { should be }
+    its ['galaxy_info'] { should be }
   end
 
   metafile['galaxy_info', 'platforms'].each do |platform|
     describe(platform) do
-      its (['name']) { should be_in ['EL', 'Debian'] }
+      its ['name'] { should be_in ['EL', 'Debian'] }
     end
   end
 end
