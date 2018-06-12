@@ -7,7 +7,7 @@ services:
 env:
   global:
   - MD_IGNORE="R1"
-  - TEST_ROLE_PATH="test-role/"
+  - TEST_ROLE_PATH="ansible-test-role/"
   - GITHUB_REPO=$TRAVIS_REPO_SLUG
   - RUBOCOP_OPTS="--fail-level=error"
   - secure: wefL0lPkBX8KEgAaWMhZWifuJoFaJSopMKjuu9jVZJ0W9PgOTUSjsOqHLcgwaWNtnlw/FL/mdAtCjxr8wtl6G0PrXe57Gnao9CBAq7GngUjSXokTSlv83Ka4jsBGFYOE5SM/3/uIL25cr60WsXJhKc2nqUBReM+U05qLlTpJIkoJ4g0BPDvHaypGA/4WB1WZLNEUc3MxMz76O2vsTX+1sjqlLA6PMSe4GfRCHotNKRuVthlF1HVSpE7PsVRirAsa5oVtKMh336mkjr+frk4eCsPYZIrxCwKo/0Qw/5KsBRWPwSdJFblrShAYIEOSEglfzxNvXEtc8HPGO6LNn9b+x/EHX5ngqyJbbw/8WotKW5afNjmxgYZGXMgXFAZF1DhbFf+rAWHOouk0eO13l/k4tdZNI1ea7MsNfrFSTRY4U3BZKMDGk/moAYtk+9Lx0txd2/G1G6VCrfoQ2ByEm7LL0ImuPEHINIRu/7aXvd4XheJIsclVhsVagytHgnw9zHn0t4ak9X4/gE+Qn78DLN2ORZytZl7dIjJSI4BVJvxb8m7sjyopFARUo2iKmOqo1+jHlwdrl4vvk6GzdH6OHfd0CAAmvCPs8Pi0f6jaR37XqipOrEY9OupoHCrpzfg5s4njs2U0ttVXgLRSc9feJ24QSsBKwUrpUf+EPTt9jt0mMEM=
@@ -26,7 +26,7 @@ script:
 - ansible-galaxy init -f --role-skeleton=egi-galaxy-template $TEST_ROLE_PATH
 - inspec exec -b local http://github.com/EGI-Foundation/ansible-fashion-police
 - cd $TEST_ROLE_PATH
-- molecule init scenario -r test-role
+- molecule init scenario -r $TEST_ROLE_PATH
 - molecule test
 after_success: 
 after_failure: 

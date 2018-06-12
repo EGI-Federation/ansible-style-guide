@@ -25,6 +25,7 @@ script:
   - molecule syntax -s $SCENARIO
   - molecule create -s $SCENARIO
   - molecule converge -s $SCENARIO
+  - molecule verify -s $SCENARIO
   - cd $TRAVIS_BUILD_DIR
 after_success:
 after_failure:
