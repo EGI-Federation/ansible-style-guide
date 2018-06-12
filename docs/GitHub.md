@@ -5,4 +5,3 @@
 ## Branches
 
 - The master branch should be protected
-- 

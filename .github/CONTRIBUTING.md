@@ -29,8 +29,7 @@ You will need to refer to this issue number when you submit the pull request.
   - **It is recommended to make pull requests against release candidate branches, whenever features are involved**, instead of against the master branch. See [Release Cycle](#release-cycle) below.
   - Pull requests to the master branch can be made in the case obvious fixes. See [Obvious Fix Policy](#obvious-fix-policy)
 
-
-We have a 3 step process for contributions. 
+We have a 3 step process for contributions.
 
   1. Fork the project if you have not, and commit changes to a git branch
   1. Create a GitHub Pull Request for your change, following the instructions in the pull request template.
@@ -123,11 +122,12 @@ A `codemeta.json` must accompany each release accurately describing the research
 
 ## Contribution Do's and Don't's
 
-  1. Please do include tests for your contribution.
-  1. If you need help, ask on the [EGI Operations community](https://community.egi.eu/c/operations)
-  1. Please do indicate new platform (families) or platform versions in the commit message, and update the relevant ticket.
-  1. If a contribution adds new platforms or platform versions, indicate such in the body of the commit message(s), and update the relevant issues. 
-  1. When writing commit messages, it is helpful for others if you indicate the issue.
+1. Please do include tests for your contribution.
+1. If you need help, ask on the [EGI Operations community](https://community.egi.eu/c/operations)
+1. Please do indicate new platform (families) or platform versions in the commit message, and update the relevant ticket.
+2. If a contribution adds new platforms or platform versions, indicate
+3. such in the body of the commit message(s), and update the relevant issues.
+4. When writing commit messages, it is helpful for others if you indicate the issue.
 
 ## Community
 
