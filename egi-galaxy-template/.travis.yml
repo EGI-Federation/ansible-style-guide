@@ -7,7 +7,10 @@ sudo: required
 services:
   - docker
 env:
-  md_ignore: R1  # Which markdownlint rules to ignore
+  global:
+    md_ignore: R1  # Which markdownlint rules to ignore
+  matrix:
+    - SCENARIO='default'
 before_install:
 install:
   - pip install -r requirements.txt  # The packages necessary for running the tests.
@@ -17,11 +20,11 @@ before_script:
       markdownlint --ignore $md_ignore $file ;
       done
 script:
-  - molecule lint
-  - molecule dependency
-  - molecule syntax
-  - molecule create
-  - molecule converge
+  - molecule lint -s $SCENARIO
+  - molecule dependency -s $SCENARIO
+  - molecule syntax -s $SCENARIO
+  - molecule create -s $SCENARIO
+  - molecule converge -s $SCENARIO
   - cd $TRAVIS_BUILD_DIR
 after_success:
 after_failure:
