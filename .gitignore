@@ -4,3 +4,6 @@ stylez/
 __pycache__/
 *.pyc
 .pytest_cache/
+black-panther.json
+build/
+Gemfile.lock

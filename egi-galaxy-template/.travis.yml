@@ -17,8 +17,11 @@ before_script:
       markdownlint --ignore $md_ignore $file ;
       done
 script:
-  - cd test-role
-  - molecule test
+  - molecule lint
+  - molecule dependency
+  - molecule syntax
+  - molecule create
+  - molecule converge
   - cd $TRAVIS_BUILD_DIR
 after_success:
 after_failure:
