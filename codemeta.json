@@ -1,0 +1,16 @@
+{
+  "@context": "https://raw.githubusercontent.com/codemeta/codemeta/master/codemeta.jsonld",
+  "@type": "Code",
+  "author": [
+    {
+      "@id": "http://orcid.org/0000-0002-6607-7145",
+      "@type": "Person",
+      "email": "brucellino@gmail.com",
+      "name": "Bruce Becker",
+      "affiliation": "EGI Foundation"
+    }
+  ],
+  "identifier": "",
+  "codeRepository": "https://github.com/EGI-Foundation/ansible-style-guide",
+  "license": "Apache 2.0"
+}

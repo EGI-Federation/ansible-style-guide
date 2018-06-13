@@ -10,3 +10,9 @@ gem 'rubocop', '~> 0.55.0'
 
 # Added at 2018-05-11 13:54:15 +0200 by becker:
 gem "octokit", "~> 4.9"
+
+gem "rspec", "~> 3.7"
+
+gem "httparty", "~> 0.16.2"
+
+gem "awesome_print", "~> 1.8"
