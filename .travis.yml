@@ -22,6 +22,7 @@ install:
 before_script:
 - 'for file in `find . -maxdepth 2 -name "*.md"` ;  do markdownlint --ignore $MD_IGNORE
   $file ; done'
+- rubocop ansible-fashion-police/controls
 script:
 - ansible-galaxy init -f --role-skeleton=egi-galaxy-template $TEST_ROLE_PATH
 - inspec exec -b local http://github.com/EGI-Foundation/ansible-fashion-police
