@@ -1,5 +1,5 @@
 <!--
-Thank you for opening an issue with our style guide.
+Thank you for opening an issue with this repository.
 Please use the template below to construct the issue.
 -->
 <!--

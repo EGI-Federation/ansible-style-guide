@@ -1,5 +1,5 @@
 <!--
-Thank you for proposing changes to our style guide!
+Thank you for proposing changes to this repository
 Please use the template below to construct the pull request.
 -->
 
