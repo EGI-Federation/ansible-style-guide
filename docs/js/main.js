@@ -9,6 +9,7 @@ $(document).ready(function () {
     if ($('.panel-cover').hasClass('panel-cover--collapsed')) return
     currentWidth = $('.panel-cover').width()
     if (currentWidth < 960) {
+      console.debug('currentWidth is %f',currentWidth)
       $('.panel-cover').addClass('panel-cover--collapsed')
       $('.content-wrapper').addClass('animated slideInRight')
     } else {
@@ -21,7 +22,7 @@ $(document).ready(function () {
     $('.panel-cover').addClass('panel-cover--collapsed')
   }
 
-  if (window.location.pathname !== '{{ site.url }}' && window.location.pathname !== '{{ site.url }}/index.html') {
+  if (window.location.pathname !== 'ansible-style-guide' && window.location.pathname !== 'ansible-style-guide/index.html') {
     $('.panel-cover').addClass('panel-cover--collapsed')
   }
 
