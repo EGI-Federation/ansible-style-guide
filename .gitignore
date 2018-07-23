@@ -8,3 +8,4 @@ black-panther.json
 build/
 Gemfile.lock
 travis/
+docs/_site/
