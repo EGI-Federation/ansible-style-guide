@@ -1,6 +1,11 @@
 stylez/
 .vscode/
-.molecule/
+#.molecule/
 __pycache__/
 *.pyc
 .pytest_cache/
+black-panther.json
+build/
+Gemfile.lock
+travis/
+docs/_site/

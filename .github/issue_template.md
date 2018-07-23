@@ -2,7 +2,7 @@
 Thank you for opening an issue with our style guide.
 Please use the template below to construct the issue.
 -->
-<!-- 
+<!--
 Remember :
   - this is a style guide
   - this repository is the consensus opinion of the EGI Operations team;
