@@ -7,10 +7,13 @@ permalink: /usage
 ## Usage
 
 This repository contains style guide for EGI's use of Ansible.
-It will
+It is meant to complement [Ansible's own style guide](https://docs.ansible.com/ansible/latest/dev_guide/style_guide/index.html?highlight=style%20guide), with a focus on helping developers and maintainers of EGI roles.
+
+This style guide will help you to:
 
 - Generate _styling_ 🏄🏾 Ansible roles, all dressed up and ready to roll 👗 using a [sweet skeleton](egi-galaxy-template)
-- Pass an expert eye over your code, applying the [Ansible Fashion Police  :policeman: compliance profile](ansible-fashion-police), to help you stick with the style guide as you code.
+- Pass an expert eye over your code, applying the [Ansible Fashion Police  👮🏽‍♀️ compliance profile](ansible-fashion-police), to help you stick with the style guide as you code.
+- Write consistent tests 🛂 for deployment scenarios and adhere to the [EGI Quality Criteria](http://egi-qc.github.io/)
 
 See the [**quickstart**](docs/Usage.md) if you're just _super_ keen 😍.
 
