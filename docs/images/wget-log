@@ -1,0 +1,11 @@
+--2018-07-23 10:55:13--  https://www.ansible.com/hubfs/2016_Images/Assets/Ansible-Mark-Large-RGB-Pool.png?hsLang=en-us
+Resolving www.ansible.com (www.ansible.com)... 104.17.113.180, 104.17.112.180, 104.17.116.180, ...
+Connecting to www.ansible.com (www.ansible.com)|104.17.113.180|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 28235 (28K) [image/png]
+Saving to: ‘Ansible-Mark-Large-RGB-Pool.png?hsLang=en-us’
+
+                Ansible-Mark-La   0%[                                                      ]       0  --.-KB/s               Ansible-Mark-Large-RGB-Pool.png 100%[=====================================================>]  27,57K  --.-KB/s    in 0,02s   
+
+2018-07-23 10:55:14 (1,50 MB/s) - ‘Ansible-Mark-Large-RGB-Pool.png?hsLang=en-us’ saved [28235/28235]
+

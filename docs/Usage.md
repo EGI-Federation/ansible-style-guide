@@ -1,4 +1,22 @@
+---
+layout: page
+title: Usage of the EGI Ansible Style Guide
+permalink: /usage
+---
+
 ## Usage
+
+This repository contains style guide for EGI's use of Ansible.
+It will
+
+- Generate _styling_ 🏄🏾 Ansible roles, all dressed up and ready to roll 👗 using a [sweet skeleton](egi-galaxy-template)
+- Pass an expert eye over your code, applying the [Ansible Fashion Police  :policeman: compliance profile](ansible-fashion-police), to help you stick with the style guide as you code.
+
+See the [**quickstart**](docs/Usage.md) if you're just _super_ keen 😍.
+
+
+See [EGI's roles on Galaxy](https://galaxy.ansible.com/EGI-Foundation).
+
 
   - Keep a copy of this repository cloned nearby, and refer to the guides in it.
   - Use the customised Ansible Galaxy skeleton when developing roles:
