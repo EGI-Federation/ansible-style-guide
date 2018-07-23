@@ -1,7 +1,7 @@
 # Site settings
 title: EGI Ansible Style Guide
 description: 'Community guide to developing re-usable Ansible products for EGI infrastructure'
-url: ''
+url: 'https://egi-foundation.github.io/ansible-style-guide'
 baseurl: ''
 # google_analytics: 'UA-XXXXXX-X'
 # disqus_shortname: 'your-disqus-name'
