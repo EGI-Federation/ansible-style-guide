@@ -27,14 +27,15 @@ Use https://galaxy.ansible.com/EGI-Foundation/ roles first if possible.
 ## Example Playbook
 
 <!--
-Including an example of how to use your role (for instance, with variables
-passed in as parameters) is always nice for users too:
+Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too.
+Be sure to write the dependencies explicitly.
 -->
 
 ```yaml
     - hosts: servers
       roles:
-         - { role: username.rolename, x: 42 }
+         - { role: EGI-Foundation.dependency1 }
+         - { role: EGI-Foundation.rolename, x: 42 }
 ```
 
 ## License

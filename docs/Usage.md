@@ -8,8 +8,8 @@
 git clone https://github.com/EGI-Foundation/ansible-style-guide
 ansible-galaxy init --role-skeleton=ansible-style-guide/egi-galaxy-template ansible_myrole_role
 ```
+
 Use this repository as a reference when generating and developing your roles.
 In particular, a [custom Ansible Galaxy template](egi-galaxy-template) is
 provided, which will generate roles which are ready for testing, and slightly
 tweaked to be more applicable to EGI infrastructure.
-

@@ -1,5 +1,4 @@
 ---
-# Travis template for an EGI-styled role
 language: python
 python:
   - '2.7'
@@ -7,18 +6,23 @@ sudo: required
 services:
   - docker
 env:
-  md_ignore: R1  # Which markdownlint rules to ignore
+  global:
+    - md_ignore: R1
+  matrix:
+    - SCENARIO='default'
 before_install:
 install:
-  - pip install -r requirements.txt  # The packages necessary for running the tests.
+  - pip install -r requirements.txt
 before_script:
-  - > # Lint all the markdown files
-      for file in `find . -maxdepth 2 -name "*.md"` ;  do
-      markdownlint --ignore $md_ignore $file ;
-      done
+  - 'for file in `find . -maxdepth 2 -name "*.md"` ;  do markdownlint --ignore $md_ignore
+  $file ; done'
 script:
-  - cd test-role
-  - molecule test
+  - molecule lint -s $SCENARIO
+  - molecule dependency -s $SCENARIO
+  - molecule syntax -s $SCENARIO
+  - molecule create -s $SCENARIO
+  - molecule converge -s $SCENARIO
+  - molecule verify -s $SCENARIO
   - cd $TRAVIS_BUILD_DIR
 after_success:
 after_failure:
@@ -26,9 +30,5 @@ before_deploy:
 deploy:
 after_deploy:
 after_script:
-# Add your notifications here.
-# Use travis encrypt to add api tokens.
 notifications:
-#   slack:
-#     secure:
-  webhooks: "https://galaxy.ansible.com/api/v1/notifications/"
+  webhooks: https://galaxy.ansible.com/api/v1/notifications/

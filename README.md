@@ -1,13 +1,14 @@
-[![Build Status](https://travis-ci.org/EGI-Foundation/ansible-style-guide.svg?branch=master)](https://travis-ci.org/EGI-Foundation/ansible-style-guide) [![Maintainability](https://api.codeclimate.com/v1/badges/f92ace02a15c3ecd758e/maintainability)](https://codeclimate.com/github/EGI-Foundation/ansible-style-guide/maintainability) [![Dependency Status](https://gemnasium.com/badges/github.com/brucellino/ansible-style-guide.svg)](https://gemnasium.com/github.com/brucellino/ansible-style-guide)
-
 # Style Guide for EGI Ansible
+
+[![Build Status](https://travis-ci.org/EGI-Foundation/ansible-style-guide.svg?branch=master)](https://travis-ci.org/EGI-Foundation/ansible-style-guide) [![Maintainability](https://api.codeclimate.com/v1/badges/f92ace02a15c3ecd758e/maintainability)](https://codeclimate.com/github/EGI-Foundation/ansible-style-guide/maintainability) [![Dependency Status](https://gemnasium.com/badges/github.com/brucellino/ansible-style-guide.svg)](https://gemnasium.com/github.com/brucellino/ansible-style-guide)
 
 ## Usage
 
 This repository contains style guide for EGI's use of Ansible.
-It will 
-  - Generate _styling_ 🏄🏾 Ansible roles, all dressed up and ready to roll 👗 using a [sweet skeleton](egi-galaxy-template)
-  - Pass an expert eye over your code, applying the [Ansible Fashion Police  :policeman: compliance profile](ansible-fashion-police), to help you stick with the style guide as you code.
+It will
+
+- Generate _styling_ 🏄🏾 Ansible roles, all dressed up and ready to roll 👗 using a [sweet skeleton](egi-galaxy-template)
+- Pass an expert eye over your code, applying the [Ansible Fashion Police  :policeman: compliance profile](ansible-fashion-police), to help you stick with the style guide as you code.
 
 See the [**quickstart**](docs/Usage.md) if you're just _super_ keen 😍.
 
@@ -19,6 +20,7 @@ You can find guides on:
 - [Ansible syntax in roles](docs/AnsibleSyntax.md)
 - [Testing role scenarios, testing tools](docs/Testing.md)
 - [Role release and publication](docs/Release.md)
+- [Collaborating with code](docs/git.md)
 
 ## Motivation
 
