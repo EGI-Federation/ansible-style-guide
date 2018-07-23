@@ -7,11 +7,12 @@ sudo: required
 services:
   - docker
 env:
-  - MD_IGNORE="R1"
-  - TEST_ROLE_PATH="ansible-role-test/"
-  - GITHUB_REPO=$TRAVIS_REPO_SLUG
-  - RUBOCOP_OPTS="--fail-level=error"
-  - secure: L6XBIPdTMVxsZ7YbHpbyPay+0mCvOdfa0FcMosK2Rn7TjzRb5GH8lfuHcJ/pSJ3Mg9B740LfiiE/pazwSsrRCzdUsbBfR2VMJepoJjD2TAX89Lcm0AdzElHOQu62CFMg6/tF4RiCaAEQRxntN/TC6JrZugtb4p/Ap79Ozosf76fKrnegcMXeB7HXoMEQzsWRc2SsWALy38DZ9iMHHRMcO/dhCt5/FW8wG6tc0f5cwZRWt9tE73MY6Bxe3yMri0KUR2pDgijOVpzdQJgKPx6omuGIve7SrztywXXA9XX0wB5OAfK++9ToJYoBcx1+W9evdemzfyKNwLZZijWFj2Ql8EHXpBsyZNbXIRa/tLHLbF7UnRbho+124vl7KTxFFw0RQWHkQ/SeLU4Gr0yONnhSZok/Rv/0/iXMojV1SwVwM9wDyhpYubKnDzbanveeQ5M/cjcu8egNS/uvE4LfDDBFRpbcMngPKMVPBK1j/3GadWezkOIyqpRybl8wrC9b0+4wfBM01EkiodjZoRSNYNAapt714E20MxgH7HANMVzVU9Yg6vxQQRU+aq2JhaGqdgL/gKKZgQPFazCE0WLUwT+GTBd81A9wVUPhhAN7cPbHJFv1rNcpwiJrlWPBjqQTqhDjP+u5KqZ1MYLXH7dM65YGypMRJhEnhvQlGO+iZWGb9ik=
+  global:
+    - MD_IGNORE="R1"
+    - TEST_ROLE_PATH="ansible-role-test/"
+    - GITHUB_REPO=$TRAVIS_REPO_SLUG
+    - RUBOCOP_OPTS="--fail-level=error"
+    - secure: L6XBIPdTMVxsZ7YbHpbyPay+0mCvOdfa0FcMosK2Rn7TjzRb5GH8lfuHcJ/pSJ3Mg9B740LfiiE/pazwSsrRCzdUsbBfR2VMJepoJjD2TAX89Lcm0AdzElHOQu62CFMg6/tF4RiCaAEQRxntN/TC6JrZugtb4p/Ap79Ozosf76fKrnegcMXeB7HXoMEQzsWRc2SsWALy38DZ9iMHHRMcO/dhCt5/FW8wG6tc0f5cwZRWt9tE73MY6Bxe3yMri0KUR2pDgijOVpzdQJgKPx6omuGIve7SrztywXXA9XX0wB5OAfK++9ToJYoBcx1+W9evdemzfyKNwLZZijWFj2Ql8EHXpBsyZNbXIRa/tLHLbF7UnRbho+124vl7KTxFFw0RQWHkQ/SeLU4Gr0yONnhSZok/Rv/0/iXMojV1SwVwM9wDyhpYubKnDzbanveeQ5M/cjcu8egNS/uvE4LfDDBFRpbcMngPKMVPBK1j/3GadWezkOIyqpRybl8wrC9b0+4wfBM01EkiodjZoRSNYNAapt714E20MxgH7HANMVzVU9Yg6vxQQRU+aq2JhaGqdgL/gKKZgQPFazCE0WLUwT+GTBd81A9wVUPhhAN7cPbHJFv1rNcpwiJrlWPBjqQTqhDjP+u5KqZ1MYLXH7dM65YGypMRJhEnhvQlGO+iZWGb9ik=
 addons:
   apt:
     packages:
