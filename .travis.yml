@@ -1,11 +1,12 @@
+---
 language: python
 python:
-- '2.7'
+  - '2.7'
+  - '3.6'
 sudo: required
 services:
-- docker
+  - docker
 env:
-  global:
   - MD_IGNORE="R1"
   - TEST_ROLE_PATH="ansible-role-test/"
   - GITHUB_REPO=$TRAVIS_REPO_SLUG
@@ -14,27 +15,27 @@ env:
 addons:
   apt:
     packages:
-    - ruby-full
-before_install: 
+      - ruby-full
+before_install:
 install:
-- pip install -r requirements.txt
-- bundle install
+  - pip install -r requirements.txt
+  - bundle install
 before_script:
-- for file in `find . -maxdepth 2 -name "*.md"` ;  do markdownlint --ignore $MD_IGNORE
-  $file ; done
-- rubocop ansible-fashion-police/controls
+  - for file in `find . -maxdepth 2 -name "*.md"` ;  do markdownlint --ignore $MD_IGNORE
+    $file ; done
+  - rubocop ansible-fashion-police/controls
 script:
-- ansible-galaxy init -f --role-skeleton=egi-galaxy-template $TEST_ROLE_PATH
-- inspec exec -b local http://github.com/EGI-Foundation/ansible-fashion-police
-- cd $TEST_ROLE_PATH
-- molecule init scenario -r $TEST_ROLE_PATH
-- molecule test
-after_success: 
-after_failure: 
-before_deploy: 
-deploy: 
-after_deploy: 
-after_script: 
+  - ansible-galaxy init -f --role-skeleton=egi-galaxy-template $TEST_ROLE_PATH
+  - inspec supermarket exec brucellino/ansible-fashion-police -b local
+  - cd $TEST_ROLE_PATH
+  - molecule init scenario -r $TEST_ROLE_PATH
+  - molecule test
+after_success:
+after_failure:
+before_deploy:
+deploy:
+after_deploy:
+after_script:
 notifications:
   slack:
     secure: S5s1uMaEu6FZjovKwBU43GKoZsdAFvUhvbnfGKfymSZxVNGNmPpWkpPiTeH5keo3lMEorU5KQgPKPwoXTIZnHv687kpW+KUIqfZw2Z2NVkrfJ8gZxj2oOqbCCXl+JHeJSziQ/siUDJriadfqt7tmXWLvlw19G+Na5mBevqFxtFpQ6HrCapEpOkarcmJbOONxlk8zVKcjCh06sZYtxdiRK67VAsoQWINnAmp1sFNjwoaSCF1ATayk76XGsObUmS3/ku51a5gyPzWmZzc0biXk+XGjeB2BRwur/uzQa2UQmlUBrhYLMzTDvUse2oR/i6ae2/vT90wBxMk/dY+OF5rO0v0i9sZMdl102F/CgAGlPPQ/aTXVI6pVnL+5D/X0OqaJ+CR4EhUVjXNbvdkg1wm7EZQbWpKP1P3Hf3YnzPTwllZCX/NNz/5vtJjjedm161EtKi0WgbcKt9UTmINCfGDAg/2vmVm3bBUqdrdGlX5VUszhlGxGobTAeTHyoLgY0+qjm6Gj8f/VTsoq+jIRhZ0Mh1c/eTH179RGCNhwhL3H7QEMarbFx+D1Lhh5MN5bNyJ8Q6Mt7GaRB57OHRpLSZSAgbR/HGkaKF8gyA6zxUh2yxsIRJw0KvX4PPSYJbcyR8fa96I1xcRFNwC1XmP4WzFu2ocGBERK+bHZSqkT2T7DSCw=

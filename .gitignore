@@ -9,3 +9,4 @@ build/
 Gemfile.lock
 travis/
 docs/_site/
+docs/.sass-cache
