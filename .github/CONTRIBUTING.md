@@ -92,7 +92,7 @@ You should submit your patch as a git branch named after the Github issue, such 
 
 It is a best practice to have your commit message have a _summary line_ that includes the ticket number, followed by an empty line and then a brief description of the commit. This also helps other contributors understand the purpose of changes to the code.
 
-```text
+```gitlog
     #3 - platform_family and style
 
     * use platform_family for platform checking
