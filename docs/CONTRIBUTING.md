@@ -3,6 +3,19 @@ layout: page
 title: Contributing to the EGI Ansible Style Guide
 permalink: /contributing
 ---
+- [Contributing](#contributing)
+  - [Feedback and Questions](#feedback-and-questions)
+  - [Kinds of contributions](#kinds-of-contributions)
+  - [Contribution Process](#contribution-process)
+    - [Pull Request Requirements](#pull-request-requirements)
+    - [Code Review Process](#code-review-process)
+    - [Obvious Fix Policy](#obvious-fix-policy)
+  - [Using git](#using-git)
+    - [Branches and Commits](#branches-and-commits)
+  - [Release Cycle](#release-cycle)
+    - [Publishing Releases](#publishing-releases)
+  - [Contribution Do's and Don't's](#contribution-dos-and-donts)
+  - [Community](#community)
 
 # Contributing
 
@@ -129,7 +142,7 @@ A `codemeta.json` must accompany each release accurately describing the research
 ## Contribution Do's and Don't's
 
 1. Please do include tests for your contribution.
-1. If you need help, ask on the [EGI Operations community](https://community.egi.eu/c/operations)
+1. If you need help, ask on the [EGI Operations community](https://community.egi.eu/c/egi-ops)
 1. Please do indicate new platform (families) or platform versions in the commit message, and update the relevant ticket.
 2. If a contribution adds new platforms or platform versions, indicate
 3. such in the body of the commit message(s), and update the relevant issues.

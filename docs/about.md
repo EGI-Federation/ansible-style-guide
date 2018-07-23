@@ -9,6 +9,7 @@ title: Style Guide for EGI Ansible
   - [Improve peer review](#improve-peer-review)
   - [Improve reliability, test coverage](#improve-reliability-test-coverage)
   - [Promote re-use](#promote-re-use)
+  - [Give recognition to e-Infrastructure engineers](#give-recognition-to-e-infrastructure-engineers)
 - [Dig deeper](#dig-deeper)
 - [Contributing](#contributing)
 - [Code of Conduct](#code-of-conduct)
@@ -48,6 +49,12 @@ Roles can only be re-used if they are reliable and deliver what they claim to.
 If, through the points above, we can improve the re-use of these roles, we can avoid dispersion of effort and even better, start to give proper recognition to the authors and peer reviewers of roles.
 All in all, we have a more robust infrastructure, less toil and better collaboration.
 
+### Give recognition to e-Infrastructure engineers
+
+A lot of effort goes into developing these roles, often with contributions from several members of the EGI Operations team and importantly members of the operations teams at participating sites.
+A common style guide allows us to publish atomic components of e-Infrastructure as code, assigning DOIs to release numbers.
+Using a common metadata schema, we are also able to recognise the concrete contributions of those who participated in the maintenance as well as the development of the package.
+<em><strong>The professional careers of many researchers are built on citable publications in journals, and following this methodology we can jointly publish the results of operations work.</strong></em>
 
 ## Dig deeper
 
@@ -58,6 +65,8 @@ You can find guides on:
 - [Testing role scenarios, testing tools](docs/Testing.md)
 - [Role release and publication](docs/Release.md)
 - [Collaborating with code](docs/git.md)
+
+See [EGI's roles on Galaxy](https://galaxy.ansible.com/EGI-Foundation).
 
 ## Contributing
 
