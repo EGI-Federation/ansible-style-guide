@@ -1,41 +1,34 @@
----
-# Travis template for an EGI-styled role
 language: python
 python:
-  - '2.7'
+- '2.7'
 sudo: required
 services:
-  - docker
+- docker
 env:
   global:
-    md_ignore: R1  # Which markdownlint rules to ignore
+  - md_ignore: R1
+  - secure: FdAgkTeMbF3rHiT7zhIqE7/P7MSRZITE0/7aFZy/eQQDtm+vGKbhSBNxXLfIB9NLzwTNro5X9O+ms73yadXmNu+G3cJUtajLsnyGwt2zPmnZ8ZafIjJM+/h7tw+/ibQwYiH6zzWn1JUAnwGf9EGYZXV7w992CBVepX956K1m89H97626Jz/6PsaUUxNxyrY/1KjBb8PZRlJmDY6Jzut10a6j0C3JyK2B5PjjQLnqDrICYARoyzzuxW7QcqsXcwSfk/RFZ91RdUKWk457ZWQCoenjKkHl0SBN6U3N99PQnS0X2vuK0AhpW8OazZrvC8prjRplP2OviHuAwT+XpgqGqaNptjYgQKQZ16v2IFfyrkUeLlkcMVr3zMb9zANSrddhM6yPdVbAZsFOKN4yoU2hgJAZayzKYJf3V2nGCPs1hZLWdtQaF+3+VofigNrGl+FtOYDKo+YDybZeSgZzLOPXzXNnP4uy1/rkEp1iKkoU+gu5ZVEVALhvymMH2ye9EQPcsdW/qrnTUgkUZpKOFaVw3Q7t8Fj+66XIv5OAEH1CjfPMGcS++4B671qnTP6ZU2/ma729Y8g4oCsualPkL4yg0KEJ1ToElyS07GNBdWjeGRtW1feMWgAX/wOxtRZQWkbslnPylT8LBIrt5XXRk7vY6rwJ6wpKwMr0Q5VVBYznMGM=
   matrix:
-    - SCENARIO='default'
-before_install:
+  - SCENARIO='default'
+before_install: 
 install:
-  - pip install -r requirements.txt  # The packages necessary for running the tests.
+- pip install -r requirements.txt
 before_script:
-  - > # Lint all the markdown files
-      for file in `find . -maxdepth 2 -name "*.md"` ;  do
-      markdownlint --ignore $md_ignore $file ;
-      done
+- 'for file in `find . -maxdepth 2 -name "*.md"` ;  do markdownlint --ignore $md_ignore
+  $file ; done'
 script:
-  - molecule lint -s $SCENARIO
-  - molecule dependency -s $SCENARIO
-  - molecule syntax -s $SCENARIO
-  - molecule create -s $SCENARIO
-  - molecule converge -s $SCENARIO
-  - molecule verify -s $SCENARIO
-  - cd $TRAVIS_BUILD_DIR
-after_success:
-after_failure:
-before_deploy:
-deploy:
-after_deploy:
-after_script:
-# Add your notifications here.
-# Use travis encrypt to add api tokens.
+- molecule lint -s $SCENARIO
+- molecule dependency -s $SCENARIO
+- molecule syntax -s $SCENARIO
+- molecule create -s $SCENARIO
+- molecule converge -s $SCENARIO
+- molecule verify -s $SCENARIO
+- cd $TRAVIS_BUILD_DIR
+after_success: 
+after_failure: 
+before_deploy: 
+deploy: 
+after_deploy: 
+after_script: 
 notifications:
-  #   slack:
-  #     secure:
-  webhooks: "https://galaxy.ansible.com/api/v1/notifications/"
+  webhooks: https://galaxy.ansible.com/api/v1/notifications/
