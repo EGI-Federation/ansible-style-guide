@@ -22,7 +22,7 @@ $(document).ready(function () {
     $('.panel-cover').addClass('panel-cover--collapsed')
   }
 
-  if (window.location.pathname !== 'ansible-style-guide' && window.location.pathname !== 'ansible-style-guide/index.html') {
+  if (window.location.pathname !== '/ansible-style-guide/' && window.location.pathname !== '/ansible-style-guide/index.html') {
     $('.panel-cover').addClass('panel-cover--collapsed')
   }
 
