@@ -25,7 +25,7 @@ before_script:
   - for file in `find . -maxdepth 2 -name "*.md"` ;  do markdownlint --ignore $MD_IGNORE $file ; done
 script:
   - ansible-galaxy init -f --role-skeleton=egi-galaxy-template $TEST_ROLE_PATH
-  - inspec supermarket exec brucellino/ansible-fashion-police -b local
+  - inspec supermarket exec brucellino/ansible-fashion-police --controls=Travis Meta 'Ansible Skeleton Directories' 'Ansible YAML main files'
   - cd $TEST_ROLE_PATH
   - molecule init scenario -r $TEST_ROLE_PATH
   - molecule test
