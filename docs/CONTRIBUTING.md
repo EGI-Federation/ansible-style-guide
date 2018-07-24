@@ -24,7 +24,7 @@ The maintainers greatly appreciate the interest of contributors and rely on cont
 We would like to take steps to put contributors in the best possible position to have their contributions accepted.
 Please take a few moments to read this short guide on how to contribute; bear in mind that contributions regarding how to best contribute are also welcome.
 
-## Feedback and Questions
+## <i class="fab fa-discourse fa-2x fa-fw"></i> Feedback and Questions <i class="fab fa-github fa-lg fa-fw"></i>
 
 If you wish to discuss anything related to the project, please open an issue or start a topic on the [EGI Community Forum](https://community.egi.eu).
 The maintainers will sometimes move issues off of GitHub to the community forum if it is thought that longer, more open-ended discussion would be beneficial, including a wider community scope.

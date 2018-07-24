@@ -5,7 +5,9 @@ title: Style Guide for EGI Ansible
 ---
 
 <small>On this page</small>
-- [Motivation](#motivation)
+- [About](#about)
+  - [Style and Design Principles](#style-and-design-principles)
+  - [UMD Deployment Scenarios](#umd-deployment-scenarios)
   - [Improve peer review](#improve-peer-review)
   - [Improve reliability, test coverage](#improve-reliability-test-coverage)
   - [Promote re-use](#promote-re-use)
@@ -14,7 +16,7 @@ title: Style Guide for EGI Ansible
 - [Contributing](#contributing)
 - [Code of Conduct](#code-of-conduct)
 
-## Motivation
+## About
 
 EGI is responsible for several [internal services](https://www.egi.eu/internal-services) either directly, or through collaboration with partners.
 Ansible roles are a simple, powerful way to express the desired state and composition of these services.
@@ -22,9 +24,25 @@ As with many languages and tools, a certain amount of leeway is possible when it
 When working on roles, it's a good idea to have common nomenclature,
 follow common styles and adopt common practice regarding documentation,
 community engagement, maintenance, support, _etc_.
+
+### Style and Design Principles
+
+See more about the [principles](/principles) underlying this work and how they inform the style guide.
+<hr>
+<a href="https://community.egi.eu"><i class="fab fa-discourse fa-2x"></i> Discuss on the EGI Community Forum</a>
+<hr>
+## Motivation
+
+
 With this repository, we express the consensus view of the [EGI Operations team](https://www.egi.eu/internal-services/operations-coordination-and-support/)
 about how Ansible roles should be developed.
 Some of the motivations for this work are described below.
+
+### UMD Deployment Scenarios
+
+Ansible roles are written with the [**Unified Middleware Distribution**](https://repository.egi.eu) in mind, from a _production-first_ point of view.
+The aim of this guide is to document good practice in developing, testing and delivering these roles so that sites can use them with ease in their own context.
+This guide asserts that roles should be developed in a **platform-agnostic** way, and tested for all production scenarios in EGI.
 
 ### Improve peer review
 
@@ -47,7 +65,7 @@ Test coverage and profiles can be harmonised across roles so that they can be ap
 
 Roles can only be re-used if they are reliable and deliver what they claim to.
 If, through the points above, we can improve the re-use of these roles, we can avoid dispersion of effort and even better, start to give proper recognition to the authors and peer reviewers of roles.
-All in all, we have a more robust infrastructure, less toil and better collaboration.
+All in all, we have a more robust infrastructure, less [toil](https://landing.google.com/sre/book/chapters/eliminating-toil.html) and better collaboration.
 
 ### Give recognition to e-Infrastructure engineers
 
@@ -60,11 +78,11 @@ Using a common metadata schema, we are also able to recognise the concrete contr
 
 You can find guides on:
 
-- [Documenting roles](docs/Documentation.md)
-- [Ansible syntax in roles](docs/AnsibleSyntax.md)
-- [Testing role scenarios, testing tools](docs/Testing.md)
-- [Role release and publication](docs/Release.md)
-- [Collaborating with code](docs/git.md)
+- [Documenting roles](documentation)
+- [Ansible syntax in roles](ansible-sytax)
+- [Testing role scenarios, testing tools](testing)
+- [Role release and publication](release)
+- [Collaborating with code](git)
 
 See [EGI's roles on Galaxy](https://galaxy.ansible.com/EGI-Foundation).
 

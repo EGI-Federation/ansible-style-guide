@@ -34,7 +34,7 @@ of high quality and re-usability by assisting in:
           Pass an expert eye over your code, applying the <a href="https://github.com/EGI-Foundation/ansible-fashion-police">
             Ansible Fashion Police 👮🏽‍♀️ compliance profile</a> to help you stick with the style guide as you code.
             <br>
-            <a href="{{ site.url}}/compliance}}" class="btn navigation__item">Maintain</a>
+            <a href="{{ site.url}}/compliance" class="btn navigation__item">Maintain</a>
       </div>
     </div>
   </div>

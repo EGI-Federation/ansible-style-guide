@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Testing
-permalink: testing
+title: Testing Ansible Roles
+permalink: /test
 ---
 
-## Testing Ansible roles
-
+EGI Ansible roles express the deployment of [UMD products](https://repository.egi.eu) into production environments.
+The roles are platform-agnostic
