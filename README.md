@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/EGI-Foundation/ansible-style-guide.svg?branch=master)](https://travis-ci.org/EGI-Foundation/ansible-style-guide) [![Maintainability](https://api.codeclimate.com/v1/badges/f92ace02a15c3ecd758e/maintainability)](https://codeclimate.com/github/EGI-Foundation/ansible-style-guide/maintainability)
 
-https://egi-founation.github.io/ansible-style-guide/
+[see egi-foundation.github.io/ansible-style-guide](https://egi-foundtion.github.io/ansible-style-guide/)
 
 ## Usage
 
@@ -10,19 +10,19 @@ This repository contains style guide for EGI's use of Ansible.
 It will
 
 - Generate _styling_ 🏄🏾 Ansible roles, all dressed up and ready to roll 👗 using a [sweet skeleton](egi-galaxy-template)
-- Pass an expert eye over your code, applying the [Ansible Fashion Police  :policeman: compliance profile](ansible-fashion-police), to help you stick with the style guide as you code.
+- Pass an expert eye over your code, applying the [Ansible Fashion Police  :policeman: compliance profile](https://github.com/EGI-Foundation/ansible-fashion-police), to help you stick with the style guide as you code.
 
-See the [**quickstart**](docs/Usage.md) if you're just _super_ keen 😍.
+See the [**quickstart**](https://egi-foundation.github.io/ansible-style-guide/usage) if you're just _super_ keen 😍.
 
 
 See [EGI's roles on Galaxy](https://galaxy.ansible.com/EGI-Foundation).
 You can find guides on:
 
-- [Documenting roles](docs/Documentation.md)
-- [Ansible syntax in roles](docs/AnsibleSyntax.md)
-- [Testing role scenarios, testing tools](docs/Testing.md)
-- [Role release and publication](docs/Release.md)
-- [Collaborating with code](docs/git.md)
+- [Documenting roles](https://egi-foundation.github.io/ansible-style-guide/role-documentation)
+- [Ansible syntax in roles](https://egi-foundation.github.io/ansible-style-guide/ansible-syntax)
+- [Testing role scenarios, testing tools](https://egi-foundation.github.io/ansible-style-guide/test)
+- [Role release and publication](https://egi-foundation.github.io/ansible-style-guide/release-pub)
+- [Collaborating with code](https://egi-foundation.github.io/ansible-style-guide/git)
 
 ## Motivation
 
