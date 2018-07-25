@@ -7,6 +7,7 @@ title: Style Guide for EGI Ansible
 <small>On this page</small>
 - [About](#about)
   - [Style and Design Principles](#style-and-design-principles)
+- [Motivation](#motivation)
   - [UMD Deployment Scenarios](#umd-deployment-scenarios)
   - [Improve peer review](#improve-peer-review)
   - [Improve reliability, test coverage](#improve-reliability-test-coverage)
@@ -31,6 +32,7 @@ See more about the [principles](/principles) underlying this work and how they i
 <hr>
 <a href="https://community.egi.eu"><i class="fab fa-discourse fa-2x"></i> Discuss on the EGI Community Forum</a>
 <hr>
+
 ## Motivation
 
 
@@ -79,7 +81,7 @@ Using a common metadata schema, we are also able to recognise the concrete contr
 You can find guides on:
 
 - [Documenting roles](documentation)
-- [Ansible syntax in roles](ansible-sytax)
+- [Ansible syntax in roles](ansible-syntax)
 - [Testing role scenarios, testing tools](testing)
 - [Role release and publication](release)
 - [Collaborating with code](git)
