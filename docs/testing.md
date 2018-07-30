@@ -32,16 +32,25 @@ Or something like that... you get the idea.
 
 ## Typical strategies
 
-The [Ansible documentation](https://docs.ansible.com/ansible) itself provides some [guidance on testing strategies](https://docs.ansible.com/ansible/latest/reference_appendices/test_strategies.html#testing-strategies) for playbooks, but we will concentrate on testing of individual [roles](https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html?highlight=roles)
+The [Ansible documentation](https://docs.ansible.com/ansible) itself provides some [guidance on testing strategies](https://docs.ansible.com/ansible/latest/reference_appendices/test_strategies.html#testing-strategies) for playbooks, but we will concentrate on testing of **individual [roles](https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html?highlight=roles)**.
+
+Roles should be re-usable and function independently, so it makes sense to include some form of internal testing.
+A typical testing strategy will cover all aspects of the role's correctness, as well as it's effects on a production environment, including [idempotency](https://docs.ansible.com/ansible/latest/reference_appendices/glossary.html?highlight=idempotent), compliance with infrastructure and security specs, _etc_.
+Care should be taken to limit the _scope_ of the test suite to what the role itself does - a site administrator should be able to inspect the test suite in order to understand what state the role is designed to achieve.
 
 ### Test-Driven Development
 
+> "Test-driven development" refers to a style of programming in which three activities are tightly interwoven: coding, testing (in the form of writing unit tests) and design (in the form of refactoring).
+
+This guide promotes [Test-Driven Development ](https://www.agilealliance.org/glossary/tdd/), and is heavily inspired by the [Site-Reliability Engineering Handbook chapter on Testing](https://landing.google.com/sre/book/chapters/testing-reliability.html).
+In order to ensure that problems are solved and _stay solved_, this guide recommends therefore proceeding on the well-known "red-green-refactor" cadence.
+
 ### Functional Tests
+
 
 ### Integration Tests
 
 
-A typical testing strategy will cover all aspects of the role's correctness, as well as it's effects on a production environment, including [idempotency](https://docs.ansible.com/ansible/latest/reference_appendices/glossary.html?highlight=idempotent), compliance with infrastructure and security specs, _etc_.
   
 
 ## Creating scenarios and baselines

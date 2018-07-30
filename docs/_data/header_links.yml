@@ -1,15 +1,15 @@
 ---
-- name: About
-  title: "Link to About page"
+- name: Start
+  title: "Link to Start page"
   icon: fa fa-info-circle
   href: "about"
 
-- name: Usage
+- name: Use
   title: Link to Usage page
   icon: fa fa-cogs
   href: usage
 
-- name: Documentation
+- name: Docs
   title: Link to  Deploy page
   icon: fas fa-book
   href: documentation

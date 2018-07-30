@@ -82,7 +82,7 @@ You can find guides on:
 
 - [Documenting roles](documentation)
 - [Ansible syntax in roles](ansible-syntax)
-- [Testing role scenarios, testing tools](testing)
+- [Testing role scenarios](test)
 - [Role release and publication](release)
 - [Collaborating with code](git)
 

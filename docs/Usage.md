@@ -11,36 +11,29 @@ of high quality and re-usability by assisting in:
 <div class="row">
   <div class="card-deck">
     <div class="card border-0">
-      <img src="images/Ansible-Mark-Large-RGB-Grey.png" alt="" class="card-top img-fluid rounded-circle" style="background: red">
+      <img src="images/Ansible-Mark-Large-RGB-Grey.png" alt="" class="card-top img-fluid rounded-circle" width="33%" style="background: red">
       <div class="card-body">
-        Generate
-        <em>styling</em> 🏄🏾 Ansible roles, all dressed up and ready to roll 👗 using a sweet skeleton
-        <br>
-        <a href="{{ site.url }}/usage#generate" class="btn navigation__item">Generate</a>
+        Build <em>styling</em> 🏄🏾 Ansible roles, all dressed up and ready to roll 👗 using a clean, robust template.
       </div>
+      <div class="card-footer border-0 text-center bg-transparent"><a href="{{ site.url }}/usage#generate" class="btn navigation__item">Build</a></div>
     </div>
     <div class="card border-0">
-      <img src="images/Ansible-Mark-Large-RGB-Grey.png" alt="Test Ansible" class="card-top img-fluid rounded-circle" style="background: green">
+      <img src="images/Ansible-Mark-Large-RGB-Grey.png" alt="Test Ansible" class="card-top img-fluid rounded-circle" width="33%" style="background: green">
       <div class="card-body">
         Write consistent tests 🛂 for deployment scenarios and adhere to the
         <a href="http://egi-qc.github.io/">EGI Quality Criteria</a>
-        <br>
-        <a href="{{ site.url}}/test" class="btn navigation__item">Test</a>
       </div>
+      <div class="card-footer border-0 text-center bg-transparent"><a href="{{ site.url}}/test" class="btn navigation__item">Test</a></div>
     </div>
     <div class="card border-0">
-      <img src="images/Ansible-Mark-Large-RGB-Grey.png" alt="Test Ansible" class="card-top img-fluid rounded-circle" style="background: #0067b1">
+      <img src="images/Ansible-Mark-Large-RGB-Grey.png" alt="Test Ansible" class="card-top img-fluid small rounded-circle social-icon" width="33%" style="background: #0067b1">
       <div class="card-body">
           Pass an expert eye over your code, applying the <a href="https://github.com/EGI-Foundation/ansible-fashion-police">
-            Ansible Fashion Police 👮🏽‍♀️ compliance profile</a> to help you stick with the style guide as you code.
-            <br>
-            <a href="{{ site.url}}/compliance" class="btn navigation__item">Maintain</a>
+            Ansible Fashion Police 👮🏽‍♀️ compliance profile</a> to help you stick with the style guide as you code, and ensure long-term sustainability and re-usability of your roles.
       </div>
+      <div class="card-footer border-0 text-center bg-transparent"><a href="{{ site.url}}/compliance" class="btn navigation__item">Maintain</a></div>
     </div>
   </div>
-</div>
-<div class="row">
-
 </div>
 
 ## Quickstart for the  _super_ keen 😍.
