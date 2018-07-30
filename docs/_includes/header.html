@@ -11,31 +11,16 @@
           <img src="{{ site.url }}/images/profile.png" class="user-image" alt="Home">
           <h1 class="panel-cover__title panel-title">{{ site.title }}</h1>
         </a>
-        <hr class="panel-cover__divider">
         <p class="panel-cover__description">{{ site.description }}</p>
-        <hr class="panel-cover__divider panel-cover__divider--secondary">
         <div class="navigation-wrapper">
           <nav class="cover-navigation cover-navigation--primary">
             <ul class="navigation">
+              {% for item in site.data.header_links %}
               <li class="navigation__item">
-                <a href="{{ site.url }}/about" title="link to {{ site.title }} Model" class="blog-button">
-                  <i class="fa fa-info-circle" aria-hidden="true"></i> About</a>
+                <a href="{{ item.href }}" title="{{ item.title }}" class="blog-button">
+                  <i class="{{ item.icon}}" aria-hidden="true"></i>{{ item.name }}</a>
               </li>
-              <li class="navigation__item">
-                <a href="{{ site.url}}/style" class="blog-button"><i class="fas fa-book"></i> Documentation</a>
-              </li>
-              <li class="navigation__item">
-                <a href="{{ site.url }}/usage" title="link to {{ site.title }} Test" class="blog-button">
-                  <i class="fa fa-cogs" aria-hidden="true"></i> Usage</a>
-              </li>
-              <li class="navigation__item">
-                <a href="{{ site.url }}/test" title="link to {{ site.title }} Deploy" class="blog-button">
-                  <i class="fas fa-clipboard-check" aria-hidden="true"></i> Testing</a>
-              </li>
-              <li class="navigation__item">
-                <a href="{{ site.url }}/contributing" title="link to {{ site.title }} Usage" class="blog-button">
-                  <i class="far fa-handshake" aria-hidden="true"></i> Contributing</a>
-              </li>
+              {% endfor %}
             </ul>
           </nav>
         </div>

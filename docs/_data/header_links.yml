@@ -1,0 +1,20 @@
+---
+- name: About
+  title: "Link to About page"
+  icon: fa fa-info-circle
+  href: "about"
+
+- name: Usage
+  title: Link to Usage page
+  icon: fa fa-cogs
+  href: usage
+
+- name: Documentation
+  title: Link to  Deploy page
+  icon: fas fa-book
+  href: documentation
+
+- name: Contributing
+  title: Link to Contributing page
+  icon: far fa-handshake
+  href: contributing

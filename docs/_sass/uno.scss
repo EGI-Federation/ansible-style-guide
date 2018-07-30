@@ -1546,13 +1546,13 @@ pre code {
 
 .content-wrapper {
 	z-index: 800;
-	width: 60%;
+	width: 65%;
 	max-width: 800px;
 	margin-left: 40%;
 }
 
 .content-wrapper__inner {
-	margin: 0 10%;
+	margin: 0 8%;
 	// padding: 50px 0;
 }
 
@@ -1691,7 +1691,7 @@ hr {
 }
 
 .panel-cover--collapsed {
-	width: 40%;
+	width: 35%;
 	max-width: 530px;
 }
 
@@ -1713,7 +1713,7 @@ hr {
 }
 
 .panel-cover__description {
-	margin: 0 30px;
+	margin: 5%;
 	color: #dddddd;
 	font-size: 1.5em;
 	font-family: 'Zilla Slab Highlight', cursive;
@@ -1745,7 +1745,7 @@ hr {
 	vertical-align: middle;
 	position: relative;
 	z-index: 800;
-	padding: 0 60px;
+	padding: 0 20px;
 }
 
 .panel-main__content {
@@ -1980,7 +1980,7 @@ i {
 	margin-top: 0;
 	margin-bottom: .2em;
 	font-size: 1.5em;
-	line-height: 1.3em;
+	line-height: 1.5em;
 }
 
 .post-list__post-title a {
@@ -2159,7 +2159,7 @@ input[type="tel"]:-ms-input-placeholder {
 	}
 	.panel-main__inner {
 		display: table-cell;
-		padding: 60px 10%;
+		padding: 20px 10%;
 	}
 	.panel-cover__description {
 		display: block;
@@ -2222,7 +2222,7 @@ input[type="tel"]:-ms-input-placeholder {
 		width: 100%;
 	}
 	.cover-navigation .navigation li {
-		width: 80%;
+		width: 100%;
 		margin-bottom: .4em;
 	}
 	.cover-navigation.navigation--social {

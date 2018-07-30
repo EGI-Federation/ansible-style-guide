@@ -79,13 +79,17 @@ EGI's Ansible Galaxy role skeleton includes:
   * Testing on [Travis](https://travis-ci.org)
   * Clean generation of `meta/main.yml` for EGI target platforms
   * GitHub issue and pull request templates
-  * Communty Health improvement files such as guides for contributors, READMEs and codes of conduct.
+  * Community Health improvement files such as guides for contributors, READMEs and codes of conduct.
 <hr>
 
 **Write some failing tests**
 
-See [the Testing]({{ site.url }}/testing) page for more.
+See [the Testing]({{ site.url }}/test) page for more.
 
 <hr>
 
-**Refer to the style guide** when reviewing pull requests
+**Refer to the style guide** when reviewing pull requests.
+
+## Dive Deeper
+
+The Ansible 
