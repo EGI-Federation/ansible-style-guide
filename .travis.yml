@@ -14,13 +14,14 @@ addons:
   apt:
     packages:
     - ruby-full
-before_install: 
+before_install:
 install:
 - pip install -r requirements.txt
 - bundle install
 before_script:
 - for file in `find . -maxdepth 2 -name "*.md"` ;  do markdownlint --ignore $MD_IGNORE
   $file ; done
+- docker pull centos:7
 script:
 - ansible-galaxy init -f --role-skeleton=egi-galaxy-template $TEST_ROLE_PATH
 - inspec supermarket exec brucellino/ansible-fashion-police --controls=Travis Meta
@@ -30,7 +31,7 @@ script:
 - molecule lint
 - molecule dependency
 - molecule syntax
-- molecule create
+- molecule --debug create
 - molecule prepare
 - molecule converge
 - molecule idempotence
