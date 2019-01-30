@@ -62,13 +62,3 @@ python-gilt==1.2.1
 PyYAML==3.13
 requests>=2.20.0
 requestsexceptions==1.4.0
-sh==1.12.14
-six==1.11.0
-tabulate==0.8.2
-testinfra==1.16.0
-texttable==0.8.8
-tree-format==0.1.2
-urllib3>=1.23
-websocket-client==0.48.0
-whichcraft==0.4.1
-yamllint==1.11.1
