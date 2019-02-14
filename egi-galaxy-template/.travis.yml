@@ -14,7 +14,8 @@ before_install:
 install:
   - pip install -r requirements.txt
 before_script:
-  - 'for file in `find . -maxdepth 2 -name "*.md"` ;  do markdownlint --ignore $md_ignore
+  - 'for file in `find . -maxdepth 2 -name "*.md"` ;  do
+  markdownlint --ignore $md_ignore
   $file ; done'
 script:
   - molecule lint -s $SCENARIO
