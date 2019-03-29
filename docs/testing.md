@@ -16,7 +16,7 @@ If roles are to be useful, they must first be _used_ and that means they must be
 **How do sites know which roles to trust?**
 
 While most all Ansible roles - in Galaxy or elsewhere - are functional in the strict sense of the word, it is hard for site administrators to know whether they can apply them "_off the shelf_" at their own site. Questions such as 
-  
+
   - "Is this role going to break my repository configuration?"
   - "Is this role going to mess with my user setup?"
   - "Is this role going to put me into an unexpected downtime?"
@@ -47,17 +47,37 @@ In order to ensure that problems are solved and _stay solved_, this guide recomm
 
 ### Functional Tests
 
-
 ### Integration Tests
-
-
-  
 
 ## Creating scenarios and baselines
 
-
-
 ### Using Molecule
+
+Have a look at the [nice introcuction to TDD wizardry with molecule](https://blog.octo.com/en/the-wizard-ansible-molecule-and-test-driven-development/).
+
+Installing [molecule](https://molecule.readthedocs.io/en/latest/).
+
+```console
+cd ansible-role-awesome-thing
+pip install -r requirements.txt
+```
+
+Initialising a default molecule scenario.
+
+```console
+molecule init scenario --scenario-name default --driver-name docker
+molecule test
+```
+
+The generated test file is `molecule/default/tests/test_default.py`.
+By default molecule with using test written with [testinfra](https://testinfra.readthedocs.io/).
+
+Doing TDD will require you to:
+* implement a failing test
+* validate molecule tests are failing
+* implement required behaviour using ansible
+* validate molecule tests are working
+* rinse and repeat
 
 ### Using Other
 
@@ -74,4 +94,3 @@ In order to ensure that problems are solved and _stay solved_, this guide recomm
 ## Security and Vulnerability Tests
 
 ### EGI Security Profile
-
