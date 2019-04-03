@@ -53,7 +53,7 @@ In order to ensure that problems are solved and _stay solved_, this guide recomm
 
 ### Using Molecule
 
-Have a look at the [nice introcuction to TDD wizardry with molecule](https://blog.octo.com/en/the-wizard-ansible-molecule-and-test-driven-development/).
+Have a look at the [nice introduction to TDD with molecule](https://brucellino.github.io/blog/Style-Guide-In-Action).
 
 Installing [molecule](https://molecule.readthedocs.io/en/latest/).
 
@@ -66,16 +66,41 @@ Initialising a default molecule scenario.
 
 ```console
 molecule init scenario --scenario-name default --driver-name docker
+# Run full test scenario, destorying the containers
 molecule test
 ```
 
-The generated test file is `molecule/default/tests/test_default.py`.
+Instead of always running the full scenario (that can be lengthy as everything
+will be destroy and provisioned from scratch), it's possible to call specific
+molecule targets.
+
+```console
+# Linting
+molecule lint
+# Creating the test container and running ansible
+molecule converge
+# Loging into running test container to make manual checks
+molecule login
+# Running molecule tests
+molecule verify
+# Updating the tests then re-running verify
+molecule verify
+# Updating ansible playbooks then converging
+molecule converge
+# Running molecule tests
+molecule verify
+# Cleaning the containers
+molecule destroy
+```
+
+It's possible to create multiple scenarios with independent tests and custom sequences.
+The generated test file for the default scenario is `molecule/default/tests/test_default.py`.
 By default molecule with using test written with [testinfra](https://testinfra.readthedocs.io/).
 
 Doing TDD will require you to:
 * implement a failing test
 * validate molecule tests are failing
-* implement required behaviour using ansible
+* implement required behaviour using Ansible
 * validate molecule tests are working
 * rinse and repeat
 
