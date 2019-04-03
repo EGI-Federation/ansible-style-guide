@@ -53,7 +53,7 @@ In order to ensure that problems are solved and _stay solved_, this guide recomm
 
 ### Using Molecule
 
-Have a look at the [nice introduction to TDD wizardry with molecule](https://blog.octo.com/en/the-wizard-ansible-molecule-and-test-driven-development/).
+Have a look at the [nice introduction to TDD with molecule](https://brucellino.github.io/blog/Style-Guide-In-Action).
 
 Installing [molecule](https://molecule.readthedocs.io/en/latest/).
 
