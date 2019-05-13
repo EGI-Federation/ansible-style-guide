@@ -17,7 +17,7 @@ addons:
 before_install:
 install:
 - pip install -r requirements.txt
-- bundle --verbose install
+- bundle install --verbose
 before_script:
 - for file in `find . -maxdepth 2 -name "*.md"` ;  do markdownlint --ignore $MD_IGNORE
   $file ; done
@@ -37,14 +37,14 @@ script:
   'Ansible Skeleton Directories' 'Ansible YAML main files'
 - inspec supermarket exec brucellino/ansible-fashion-police --controls=Travis Meta
   'Ansible Skeleton Directories' 'Ansible YAML main files'
-- bundle --verbose install --path $(pwd)/vendor/bundle
+- bundle install --verbose --path $(pwd)/vendor/bundle
 - find $BUNDLE_PATH -name inspec
 - find /home/travis -name inspec
 - inspec supermarket exec brucellino/ansible-fashion-police --controls=Travis Meta
   'Ansible Skeleton Directories' 'Ansible YAML main files'
 - bunlde inspec supermarket exec brucellino/ansible-fashion-police --controls=Travis Meta
   'Ansible Skeleton Directories' 'Ansible YAML main files'
-- bundle --verbose install --binstubs
+- bundle install --verbose --binstubs
 - find $BUNDLE_PATH -name inspec
 - find /home/travis -name inspec
 - inspec supermarket exec brucellino/ansible-fashion-police --controls=Travis Meta
