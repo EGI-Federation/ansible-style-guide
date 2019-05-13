@@ -19,12 +19,18 @@ before_install:
 install:
 - pip install -r requirements.txt
 - bundle install
+- bundle info inspec
 before_script:
 - for file in `find . -maxdepth 2 -name "*.md"` ;  do markdownlint --ignore $MD_IGNORE
   $file ; done
 - docker pull centos:7
 script:
 - ansible-galaxy init -f --role-skeleton=egi-galaxy-template $TEST_ROLE_PATH
+- echo "Path: $PATH"
+- echo "PWD: $PWD"
+- bundle info inspec
+- where inspec
+- which inspec
 - inspec supermarket exec brucellino/ansible-fashion-police --controls=Travis Meta
   'Ansible Skeleton Directories' 'Ansible YAML main files'
 - cd $TEST_ROLE_PATH
