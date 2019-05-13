@@ -17,7 +17,7 @@ addons:
 before_install:
 install:
 - pip install -r requirements.txt
-- bundle install
+- bundle --verbose install
 before_script:
 - for file in `find . -maxdepth 2 -name "*.md"` ;  do markdownlint --ignore $MD_IGNORE
   $file ; done
@@ -26,13 +26,30 @@ script:
 - ansible-galaxy init -f --role-skeleton=egi-galaxy-template $TEST_ROLE_PATH
 - echo $PATH
 - pwd
-- ls -l /home/travis/.rvm/gems/ruby-2.4.1@global/bin
 - find /home/travis -name inspec
 - where inspec
 - which inspec
 - bundle info inspec
-- bundle exec inspec
+- echo $BUNDLE_PATH
+- ls -l $BUNDLE_PATH
+- find $BUNDLE_PATH -name inspec
+- bundle exec inspec supermarket exec brucellino/ansible-fashion-police --controls=Travis Meta
+  'Ansible Skeleton Directories' 'Ansible YAML main files'
 - inspec supermarket exec brucellino/ansible-fashion-police --controls=Travis Meta
+  'Ansible Skeleton Directories' 'Ansible YAML main files'
+- bundle --verbose install --path $(pwd)/vendor/bundle
+- find $BUNDLE_PATH -name inspec
+- find /home/travis -name inspec
+- inspec supermarket exec brucellino/ansible-fashion-police --controls=Travis Meta
+  'Ansible Skeleton Directories' 'Ansible YAML main files'
+- bunlde inspec supermarket exec brucellino/ansible-fashion-police --controls=Travis Meta
+  'Ansible Skeleton Directories' 'Ansible YAML main files'
+- bundle --verbose install --binstubs
+- find $BUNDLE_PATH -name inspec
+- find /home/travis -name inspec
+- inspec supermarket exec brucellino/ansible-fashion-police --controls=Travis Meta
+  'Ansible Skeleton Directories' 'Ansible YAML main files'
+- bunlde inspec supermarket exec brucellino/ansible-fashion-police --controls=Travis Meta
   'Ansible Skeleton Directories' 'Ansible YAML main files'
 - cd $TEST_ROLE_PATH
 - molecule init scenario -r $TEST_ROLE_PATH
