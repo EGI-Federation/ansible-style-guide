@@ -1,8 +1,7 @@
 # frozen_string_literal: true
 source "https://rubygems.org"
 
-# Pin as >= 4.3.2 requires ruby >= 2.4
-gem 'inspec', '>= 2.1.68', '< 4.3.2'
+gem 'inspec', '>= 2.1.68'
 
 # Added at 2018-04-19 10:27:01 +0200 by becker:
 gem 'rubocop', '~> 0.55.0'
