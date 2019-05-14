@@ -4,7 +4,8 @@ python:
 sudo: required
 cache:
   - pip
-  - bundler
+  directories:
+    - /home/travis/.rvm/
 services:
 - docker
 env:
