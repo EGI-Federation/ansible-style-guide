@@ -16,7 +16,8 @@ env:
   - GITHUB_REPO=$TRAVIS_REPO_SLUG
   - RUBOCOP_OPTS=--fail-level=error
 before_install:
-  - rvm install 2.6.3
+  - rvm install 2.6.1
+  - rvm use 2.6.1 --default
 install:
 - pip install -r requirements.txt
 - bundle install
