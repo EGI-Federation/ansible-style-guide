@@ -14,29 +14,20 @@ addons:
   apt:
     packages:
     - ruby-full
+    - bundler
 before_install:
 install:
 - pip install -r requirements.txt
-- bundle install --binstubs --verbose --path $(pwd)/vendor/bundle
+- bundle install
 before_script:
 - for file in `find . -maxdepth 2 -name "*.md"` ;  do markdownlint --ignore $MD_IGNORE
   $file ; done
 - docker pull centos:7
 script:
 - ansible-galaxy init -f --role-skeleton=egi-galaxy-template $TEST_ROLE_PATH
-- echo $PATH
-- where inspec
-- which inspec
-- bundle doctor
-- bundle info inspec
-- find /home/travis -name inspec
-- find /home/travis/build/EGI-Foundation/ansible-style-guide/vendor/bundle/ -name inspec
-- bundle exec inspec supermarket exec brucellino/ansible-fashion-police --controls=Travis Meta
-  'Ansible Skeleton Directories' 'Ansible YAML main files'
+- bundle exec inspec
 - inspec supermarket exec brucellino/ansible-fashion-police --controls=Travis Meta
   'Ansible Skeleton Directories' 'Ansible YAML main files'
-- ls -lR /home/travis/.rvm/gems/ruby-2.4.1/gems/inspec-4.3.2/
-- ls -lR /home/travis/build/EGI-Foundation/ansible-style-guide/vendor/bundle/
 - cd $TEST_ROLE_PATH
 - molecule init scenario -r $TEST_ROLE_PATH
 - molecule lint
