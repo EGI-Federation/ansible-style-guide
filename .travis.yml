@@ -33,8 +33,6 @@ script:
 - find /home/travis/build/EGI-Foundation/ansible-style-guide/vendor/bundle/ -name inspec
 - bundle exec inspec supermarket exec brucellino/ansible-fashion-police --controls=Travis Meta
   'Ansible Skeleton Directories' 'Ansible YAML main files'
-- bundle exec inspec supermarket exec brucellino/ansible-fashion-police --controls=Travis Meta
-  'Ansible Skeleton Directories' 'Ansible YAML main files'
 - inspec supermarket exec brucellino/ansible-fashion-police --controls=Travis Meta
   'Ansible Skeleton Directories' 'Ansible YAML main files'
 - ls -lR /home/travis/.rvm/gems/ruby-2.4.1/gems/inspec-4.3.2/
