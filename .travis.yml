@@ -4,7 +4,6 @@ python:
 sudo: required
 cache:
   - pip
-  - bundler
 services:
 - docker
 env:
