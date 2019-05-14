@@ -25,7 +25,6 @@ before_script:
 - docker pull centos:7
 script:
 - ansible-galaxy init -f --role-skeleton=egi-galaxy-template $TEST_ROLE_PATH
-- bundle exec inspec
 - inspec supermarket exec brucellino/ansible-fashion-police --controls=Travis Meta
   'Ansible Skeleton Directories' 'Ansible YAML main files'
 - cd $TEST_ROLE_PATH
