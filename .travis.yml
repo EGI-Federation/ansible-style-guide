@@ -6,7 +6,6 @@ cache:
   pip: true
   directories:
     - /home/travis/.rvm/
-    - vendor/bundle
 services:
 - docker
 env:
@@ -15,9 +14,11 @@ env:
   - TEST_ROLE_PATH=ansible-role-test/
   - GITHUB_REPO=$TRAVIS_REPO_SLUG
   - RUBOCOP_OPTS=--fail-level=error
+addons:
+  apt:
+    packages:
+    - ruby-full
 before_install:
-  - rvm install 2.6.1
-  - rvm use 2.6.1 --default
 install:
 - pip install -r requirements.txt
 - bundle install
