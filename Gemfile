@@ -14,5 +14,3 @@ gem "rspec", "~> 3.7"
 gem "httparty", "~> 0.16.2"
 
 gem "awesome_print", "~> 1.8"
-
-gem "train", "= 1.5.11"
