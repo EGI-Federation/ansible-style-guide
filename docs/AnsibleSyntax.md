@@ -31,6 +31,7 @@ This document serves to guide the development of Ansible roles, by providing rel
 1. Default vars should pass tests.
 1. Provide sane range defaults for variables where applicable, in the README.
 1. Variables should be kept to the bare minimum; unused variables should be eliminated.
+1. Check [Ansible best practices: the essentials](https://www.ansible.com/blog/ansible-best-practices-essentials).
 
 ## Secrets
 
