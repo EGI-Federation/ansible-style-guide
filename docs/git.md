@@ -14,6 +14,10 @@ Most work happens on a "feature branch".
 It is assumed that the master branch will always converge and pass linting tests, even if it is not feature-complete.
 Releases should follow the semantic versioning style. This is required in order to ingest new releases into Zenodo for publication and assignment of DOIs.
 
+#### GitHub Style Considerations
+
+- The master branch should be protected
+
 ### Release policy and checklist
 
 #### When to create a release

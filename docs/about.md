@@ -28,7 +28,7 @@ community engagement, maintenance, support, _etc_.
 
 ### Style and Design Principles
 
-See more about the [principles](/principles) underlying this work and how they inform the style guide.
+See more about the [principles](principles) underlying this work and how they inform the style guide.
 <hr>
 <a href="https://community.egi.eu"><i class="fab fa-discourse fa-2x"></i> Discuss on the EGI Community Forum</a>
 <hr>
@@ -80,10 +80,10 @@ Using a common metadata schema, we are also able to recognise the concrete contr
 
 You can find guides on:
 
-- [Documenting roles](documentation)
+- [Documenting roles](role-documentation)
 - [Ansible syntax in roles](ansible-syntax)
 - [Testing role scenarios](test)
-- [Role release and publication](release)
+- [Role release and publication](release-publish)
 - [Collaborating with code](git)
 
 See [EGI's roles on Galaxy](https://galaxy.ansible.com/EGI-Foundation).
