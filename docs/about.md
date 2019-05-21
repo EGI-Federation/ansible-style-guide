@@ -80,7 +80,7 @@ Using a common metadata schema, we are also able to recognise the concrete contr
 
 You can find guides on:
 
-- [Documenting roles](documentation)
+- [Documenting roles](role-documentation)
 - [Ansible syntax in roles](ansible-syntax)
 - [Testing role scenarios](test)
 - [Role release and publication](release)
