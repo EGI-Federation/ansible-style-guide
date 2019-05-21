@@ -1,9 +1,10 @@
 ---
 layout: page
 title: EGI Ansible Style Guide Usage
-permalink: /usage 
---- 
-This repository contains style guide for EGI's use of Ansible. 
+permalink: /usage
+---
+
+This repository contains style guide for EGI's use of Ansible.
 It is meant to complement [Ansible's own style guide](https://docs.ansible.com/ansible/latest/dev_guide/style_guide/index.html?highlight=style%20guide),
 with a focus on helping developers and maintainers of EGI roles. This style guide will help you to follow to develop roles
 of high quality and re-usability by assisting in:

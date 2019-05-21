@@ -6,10 +6,27 @@
       "@id": "http://orcid.org/0000-0002-6607-7145",
       "@type": "Person",
       "email": "brucellino@gmail.com",
-      "name": "Bruce Becker",
+      "name": "Bruce Becker"
+    }
+  ],
+  "contributor": [
+    {
+      "@id": "http://orcid.org/0000-0002-5686-3193",
+      "@type": "Person",
+      "email": "baptiste@bapt.name",
+      "givenName": "Baptiste",
+      "familyName": "Grenier",
       "affiliation": "EGI Foundation"
     }
   ],
+  "maintainer": {
+    "@id": "http://orcid.org/0000-0002-5686-3193",
+    "@type": "Person",
+    "email": "baptiste@bapt.name",
+    "givenName": "Baptiste",
+    "familyName": "Grenier",
+    "affiliation": "EGI Foundation"
+  },
   "identifier": "",
   "codeRepository": "https://github.com/EGI-Foundation/ansible-style-guide",
   "license": "Apache 2.0"

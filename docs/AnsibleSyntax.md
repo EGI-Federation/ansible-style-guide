@@ -1,4 +1,8 @@
-# Ansible syntax
+---
+layout: page
+title: Ansible Role style guide
+permalink: /ansible-syntax
+---
 
 This document serves to guide the development of Ansible roles, by providing relevant templates and style guides.
 

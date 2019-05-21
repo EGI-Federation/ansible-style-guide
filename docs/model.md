@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Modelling UMD
-intro: 
+intro:
 ---
 
 The [Unified Middleware Distribution](http://repository.egi.eu) (UMD) is a redistribution of middleware components provided by several product teams.

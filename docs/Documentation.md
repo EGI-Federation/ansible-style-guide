@@ -1,4 +1,8 @@
-# Documentation style
+---
+layout: page
+title: Documenting Ansible Roles
+permalink: /role-documentation
+---
 
 This section provides a guide on what documentation should be written in your roles, and how they should be written.
 

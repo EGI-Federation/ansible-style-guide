@@ -1,4 +1,4 @@
-ansible==2.7.0
+ansible==2.7.8
 ansible-lint==3.4.23
 anyconfig==0.9.7
 arrow==0.12.1
@@ -33,7 +33,7 @@ future==0.16.0
 git-url-parse==1.1.0
 idna==2.6
 ipaddress==1.0.22
-Jinja2==2.10
+Jinja2==2.10.1
 jinja2-time==0.2.0
 jsonschema==2.6.0
 MarkupSafe==1.0

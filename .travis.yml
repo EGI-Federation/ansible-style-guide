@@ -2,6 +2,10 @@ language: python
 python:
 - '2.7'
 sudo: required
+cache:
+  pip: true
+  directories:
+    - /home/travis/.rvm/
 services:
 - docker
 env:
