@@ -9,7 +9,7 @@ author:
   name: 'EGI Operations'
   email: operations@egi.eu
   twitter_username: egi_einfra
-  github_username:  egi-foundation
+  github_username:  EGI-Federation
 
 defaults:
   -
