@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/EGI-Federation/ansible-style-guide.svg?branch=master)](https://travis-ci.org/EGI-Federation/ansible-style-guide)
 [![Maintainability](https://api.codeclimate.com/v1/badges/f92ace02a15c3ecd758e/maintainability)](https://codeclimate.com/github/EGI-Federation/ansible-style-guide/maintainability)
 
-[see egi-foundation.github.io/ansible-style-guide](https://egi-foundation.github.io/ansible-style-guide/)
+[see egi-federation.github.io/ansible-style-guide](https://egi-federation.github.io/ansible-style-guide/)
 
 ## Usage
 
@@ -16,7 +16,7 @@ This repository contains style guide for EGI's use of Ansible. It will
   to help you stick with the style guide as you code.
 
 See the
-[**quickstart**](https://egi-foundation.github.io/ansible-style-guide/usage) if
+[**quickstart**](https://egi-federation.github.io/ansible-style-guide/usage) if
 you're just _super_ keen 😍.
 
 See [EGI's roles on Galaxy](https://galaxy.ansible.com/EGI-Foundation). You can
