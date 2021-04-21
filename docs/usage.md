@@ -29,7 +29,7 @@ of high quality and re-usability by assisting in:
     <div class="card border-0">
       <img src="images/Ansible-Mark-Large-RGB-Grey.png" alt="Test Ansible" class="card-top img-fluid small rounded-circle social-icon" width="33%" style="background: #0067b1">
       <div class="card-body">
-          Pass an expert eye over your code, applying the <a href="https://github.com/EGI-Foundation/ansible-fashion-police">
+          Pass an expert eye over your code, applying the <a href="https://github.com/EGI-Federation/ansible-fashion-police">
             Ansible Fashion Police 👮🏽‍♀️ compliance profile</a> to help you stick with the style guide as you code, and ensure long-term sustainability and re-usability of your roles.
       </div>
       <div class="card-footer border-0 text-center bg-transparent"><a href="{{ site.url}}/compliance" class="btn navigation__item">Maintain</a></div>
@@ -56,7 +56,7 @@ $source egi-ansible/bin/activate
 **Clone this repository**
 
 ```bash
-git clone https://github.com/EGI-Foundation/ansible-style-guide
+git clone https://github.com/EGI-Federation/ansible-style-guide
 ```
 
 **Use the customised Ansible Galaxy skeleton when developing roles**

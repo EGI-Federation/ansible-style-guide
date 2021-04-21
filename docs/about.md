@@ -86,7 +86,7 @@ You can find guides on:
 - [Role release and publication](release-publish)
 - [Collaborating with code](git)
 
-See [EGI's roles on Galaxy](https://galaxy.ansible.com/EGI-Foundation).
+See [EGI's roles on Galaxy](https://galaxy.ansible.com/EGI-Federation).
 
 ## Contributing
 

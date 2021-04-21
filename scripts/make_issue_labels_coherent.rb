@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 # scripts/make/issue_lables_coherent.rb
-# this script takes the labels in the EGI-Foundation/ansible-style-guide repo
-# and ensures that they are present in all of the repos in the EGI-Foundation org
+# this script takes the labels in the EGI-Federation/ansible-style-guide repo
+# and ensures that they are present in all of the repos in the EGI-Federation org
 # It is a dirty hack that uses Octokit.rb to interact with the GitHub API.
 # You got a better idea!? Send PR. no, seriously.
 
@@ -12,8 +12,8 @@ token = ENV['OCTOKIT_GITHUB_TOKEN']
 client = Octokit::Client.new :access_token => token
 
 # Get the list of labels that should exist, with their metadata
-labels = client.labels('EGI-Foundation/ansible-style-guide')
-repos = client.repos('EGI-Foundation')
+labels = client.labels('EGI-Federation/ansible-style-guide')
+repos = client.repos('EGI-Federation')
 
 repos.each do |repo|
   labels.each do |label|

@@ -28,6 +28,6 @@
     "affiliation": "EGI Foundation"
   },
   "identifier": "",
-  "codeRepository": "https://github.com/EGI-Foundation/ansible-style-guide",
+  "codeRepository": "https://github.com/EGI-Federation/ansible-style-guide",
   "license": "Apache 2.0"
 }

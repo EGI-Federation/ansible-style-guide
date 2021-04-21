@@ -21,7 +21,7 @@ A description of the settable variables for this role should go here, including 
 <!--
 A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
 
-Use https://galaxy.ansible.com/EGI-Foundation/ roles first if possible.
+Use https://galaxy.ansible.com/EGI-Federation/ roles first if possible.
 -->
 
 ## Example Playbook
@@ -34,8 +34,8 @@ Be sure to write the dependencies explicitly.
 ```yaml
     - hosts: servers
       roles:
-         - { role: EGI-Foundation.dependency1 }
-         - { role: EGI-Foundation.rolename, x: 42 }
+         - { role: EGI-Federation.dependency1 }
+         - { role: EGI-Federation.rolename, x: 42 }
 ```
 
 ## License
